@@ -44,14 +44,8 @@ android {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy:2.4.1:grooid'
-    androidTestCompile 'com.squareup.dagger:dagger:1.2.2' //Don't know why it doesn't work without it
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0') {
-        exclude group: 'javax.inject'
-    }
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.0') {
-        exclude group: 'javax.inject'
-        exclude group: 'com.android.support'
-    }
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+    androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
     androidTestCompile('org.spockframework:spock-core:0.7-groovy-2.0') {
         exclude group: 'org.codehaus.groovy'
         exclude group: 'org.hamcrest'
