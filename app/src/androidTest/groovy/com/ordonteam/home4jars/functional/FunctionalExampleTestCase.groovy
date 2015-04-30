@@ -1,6 +1,6 @@
-package com.ordonteam.functional
+package com.ordonteam.home4jars.functional
 
-import static com.ordonteam.functional.helper.Checker.checkIfViewWithTextIsDisplayed
+import static com.ordonteam.home4jars.functional.helper.Checker.checkIfViewWithTextIsDisplayed
 
 public final class FunctionalExampleTestCase extends BaseInstrumentationTestCase {
 

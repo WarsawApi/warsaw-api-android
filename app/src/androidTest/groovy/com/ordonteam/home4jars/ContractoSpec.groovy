@@ -1,4 +1,4 @@
-package com.ordonteam
+package com.ordonteam.home4jars
 
 import contracto.Contracto
 import spock.lang.Specification
