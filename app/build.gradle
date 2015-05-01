@@ -44,7 +44,8 @@ android {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy:2.4.1:grooid'
-    compile fileTree(dir: '/../libs', include: '*.jar')
+    androidTestCompile files('libs/contracto-jvm-core-1.0.jar')
+    androidTestCompile files('libs/contracto-retrofit-1.0.jar')
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
     androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.0'
     androidTestCompile('org.spockframework:spock-core:0.7-groovy-2.0') {
