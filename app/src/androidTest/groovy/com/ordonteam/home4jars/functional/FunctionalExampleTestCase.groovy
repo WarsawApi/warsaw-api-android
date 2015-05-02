@@ -11,7 +11,7 @@ public final class FunctionalExampleTestCase extends BaseInstrumentationTestCase
     }
 
     public void testIsHelloWorldDisplayed() {
-        checkIfViewWithTextIsDisplayed("Hello World")
+        checkIfViewWithTextIsDisplayed("Metro")
     }
 
 }
