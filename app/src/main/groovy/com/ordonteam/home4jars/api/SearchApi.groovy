@@ -9,7 +9,7 @@ import retrofit.http.Query;
 interface SearchApi {
 
     @GET('/search')
-    List<SearchResult> call(
+    rx.Observable<List<SearchResult>> call(
             @Query('school') Integer school,
             @Query('metro') Integer metro
     )
