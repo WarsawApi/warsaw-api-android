@@ -8,7 +8,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/search_options" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/search_pager"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
 
         <ImageView
             android:id="@+id/search_map"

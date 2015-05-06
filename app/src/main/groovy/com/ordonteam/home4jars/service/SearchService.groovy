@@ -24,7 +24,7 @@ class SearchService {
         searchApi = adapter.create(SearchApi)
     }
 
-    rx.Observable<List<SearchResult>> call(Integer school, Integer metro) {
-        return searchApi.call(school, metro)
+    rx.Observable<List<SearchResult>> call(SearchParams params) {
+        return searchApi.call(params.school, params.metro)
     }
 }
