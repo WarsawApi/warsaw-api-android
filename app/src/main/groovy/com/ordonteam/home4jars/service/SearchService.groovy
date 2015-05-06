@@ -16,7 +16,7 @@ class SearchService {
 
     SearchService() {
         RestAdapter adapter = new RestAdapter.Builder()
-                .setEndpoint('http://10.0.2.2:13579/')
+                .setEndpoint('https://warsaw-api-backend.herokuapp.com/')
                 .setClient(new OkClient(new OkHttpClient()))
                 .setConverter(new GsonConverter(new Gson()))
                 .setLogLevel(BuildConfig.DEBUG ? RestAdapter.LogLevel.FULL : RestAdapter.LogLevel.NONE)
