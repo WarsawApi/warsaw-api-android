@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view
+package com.ordonteam.home4jars
 
 import android.app.Activity
 import android.content.Intent

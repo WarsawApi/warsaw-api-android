@@ -10,8 +10,8 @@ public final class FunctionalExampleTestCase extends BaseInstrumentationTestCase
         getActivity()
     }
 
-    public void testIsHelloWorldDisplayed() {
-        checkIfViewWithTextIsDisplayed("Metro")
-    }
+//    public void testIsHelloWorldDisplayed() {
+//        checkIfViewWithTextIsDisplayed("Metro")
+//    }
 
 }
