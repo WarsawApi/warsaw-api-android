@@ -12,7 +12,7 @@ import groovy.transform.CompileStatic
 final class SecondRowPreferencesItemAdapter implements ItemAdapter {
     @Override
     int getViewType() {
-        return 1
+        return 2
     }
 
     @Override

@@ -9,10 +9,10 @@ import com.ordonteam.home4jars.view.common.ItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class FirstRowPreferencesItemAdapter implements ItemAdapter {
+final class TransportationPreferencesItemAdapter implements ItemAdapter {
     @Override
     int getViewType() {
-        return 1
+        return 12
     }
 
     @Override

@@ -11,4 +11,6 @@ final class PreferencesAdapter extends BaseRecyclerViewAdapter{
         items.add(new FirstRowPreferencesItemAdapter())
         items.add(new SecondRowPreferencesItemAdapter())
     }
+
+
 }
