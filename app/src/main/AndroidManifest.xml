@@ -14,7 +14,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.province.ProvinceActivity" />
-        <activity android:name=".view.search.SearchActivity" />
+        <activity android:name=".view.depercated.search.SearchActivity" />
         <activity android:name=".view.choose.ChooseActivity" />
         <activity android:name=".view.result.ResultActivity" />
     </application>

@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.search
+package com.ordonteam.home4jars.view.depercated.search
 
 import android.support.v4.view.PagerAdapter
 import android.view.LayoutInflater

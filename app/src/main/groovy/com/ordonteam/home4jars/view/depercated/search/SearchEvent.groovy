@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.search
+package com.ordonteam.home4jars.view.depercated.search
 
 import com.ordonteam.home4jars.service.SearchParams
 import groovy.transform.CompileStatic

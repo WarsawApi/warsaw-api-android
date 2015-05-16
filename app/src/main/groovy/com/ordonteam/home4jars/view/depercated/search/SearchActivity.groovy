@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.search
+package com.ordonteam.home4jars.view.depercated.search
 
 import android.app.Activity
 import android.os.Bundle

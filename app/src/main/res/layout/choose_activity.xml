@@ -87,4 +87,6 @@
     </LinearLayout>
 
     <include layout="@layout/button_next" />
+
+    <include layout="@layout/progress_bar" />
 </FrameLayout>
