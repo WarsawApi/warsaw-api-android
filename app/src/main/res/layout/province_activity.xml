@@ -6,12 +6,12 @@
 
     <ImageView
         android:src="@drawable/map"
+        android:scaleType="centerCrop"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <Button
         android:id="@+id/next"
-        android:clickable="false"
         android:layout_gravity="bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
