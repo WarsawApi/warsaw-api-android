@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.OnClick
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.SearchResult
+import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.service.SearchParams
 import com.ordonteam.home4jars.view.result.ResultActivity
 import groovy.transform.CompileStatic
@@ -28,8 +28,8 @@ final class ChooseActivity extends SearchingActivity {
         search(new SearchParams())
     }
 
-    void onSuccess(List<SearchResult> searchResults) {
-        ResultActivity.start(this)
+    void onSuccess(SearchResults searchResults) {
+        ResultActivity.start(this, searchResults)
     }
 
     static void start(Context context) {

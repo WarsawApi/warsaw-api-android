@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResult
+import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.service.SearchParams
 import com.ordonteam.home4jars.service.SearchService
 import com.ordonteam.home4jars.view.common.EmptyTouchListener
@@ -24,12 +25,12 @@ abstract class SearchingActivity extends Activity {
                 .subscribe(this.&onSuccessWrapper, this.&onError)
     }
 
-    void onSuccessWrapper(List<SearchResult> searchResults){
+    void onSuccessWrapper(SearchResults searchResults){
         dismissLoader()
         onSuccess(searchResults)
     }
 
-    abstract void onSuccess(List<SearchResult> searchResults)
+    abstract void onSuccess(SearchResults searchResults)
 
     void onError(Throwable throwable) {
         Log.e('SearchService', throwable.message, throwable)
