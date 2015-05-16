@@ -7,13 +7,14 @@ class SearchResult {
     String id
     String latitude
     String longitude
-    String name
+    String address
     String url
+    Distances distances
 
     String getMarkerString() {
         return 'markers=' +
                 'color:blue%7C' +
-                "label:${name.charAt(0)}%7C" +
+                "label:${address.charAt(0)}%7C" +
                 "${latitude},${longitude}"
     }
 
