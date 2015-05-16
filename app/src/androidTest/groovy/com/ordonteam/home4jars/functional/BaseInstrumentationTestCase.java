@@ -2,13 +2,13 @@ package com.ordonteam.home4jars.functional;
 
 import android.test.ActivityInstrumentationTestCase2;
 
-import com.ordonteam.home4jars.MainActivity;
+import com.ordonteam.home4jars.view.search.SearchActivity;
 
 
-public abstract class BaseInstrumentationTestCase extends ActivityInstrumentationTestCase2<MainActivity> {
+public abstract class BaseInstrumentationTestCase extends ActivityInstrumentationTestCase2<SearchActivity> {
 
     public BaseInstrumentationTestCase() {
-        super(MainActivity.class);
+        super(SearchActivity.class);
     }
 
 }

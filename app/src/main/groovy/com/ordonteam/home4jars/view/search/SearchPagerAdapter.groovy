@@ -1,12 +1,11 @@
-package com.ordonteam.home4jars
+package com.ordonteam.home4jars.view.search
 
 import android.support.v4.view.PagerAdapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.TextView
-import com.arasthel.swissknife.annotations.InjectView
+import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.service.SearchParams
 import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic

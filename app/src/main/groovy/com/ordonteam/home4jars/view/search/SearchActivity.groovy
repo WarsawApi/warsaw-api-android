@@ -1,26 +1,22 @@
-package com.ordonteam.home4jars;
+package com.ordonteam.home4jars.view.search
 
-import android.app.Activity;
+import android.app.Activity
 import android.os.Bundle
-import android.support.v4.view.PagerAdapter
 import android.support.v4.view.ViewPager
 import android.util.Log
-import android.view.View
 import android.widget.EditText
 import android.widget.ImageView
-import com.arasthel.swissknife.SwissKnife
-import com.arasthel.swissknife.annotations.InjectView
-import com.arasthel.swissknife.annotations.OnClick
 import com.bumptech.glide.Glide
+import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.service.SearchService
 import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic
 import rx.Subscription
-import rx.android.schedulers.AndroidSchedulers;
+import rx.android.schedulers.AndroidSchedulers
 
 @CompileStatic
-final class MainActivity extends Activity {
+final class SearchActivity extends Activity {
 
     Subscription subscription
 
