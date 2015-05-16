@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/home_4_jars_activity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
@@ -29,7 +29,7 @@
                 android:layout_weight="1"
                 android:src="@drawable/swimming_pool" />
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
@@ -42,21 +42,21 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
                 android:layout_weight="1"
                 android:src="@drawable/park" />
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
                 android:layout_weight="1"
                 android:src="@drawable/swimming_pool" />
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
@@ -69,21 +69,21 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
                 android:layout_weight="1"
                 android:src="@drawable/park" />
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
                 android:layout_weight="1"
                 android:src="@drawable/swimming_pool" />
 
-            <com.ordonteam.home4jars.view.common.FlipImageView
+            <ImageView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/margin_large"
@@ -92,8 +92,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <include layout="@layout/button_next" />
-
-    <include layout="@layout/progress_bar" />
-</FrameLayout>
+</merge>

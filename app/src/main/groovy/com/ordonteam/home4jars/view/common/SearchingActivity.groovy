@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.choose
+package com.ordonteam.home4jars.view.common
 
 import android.app.Activity
 import android.util.Log

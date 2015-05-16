@@ -8,6 +8,7 @@ import com.arasthel.swissknife.annotations.OnClick
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.service.SearchParams
+import com.ordonteam.home4jars.view.common.SearchingActivity
 import com.ordonteam.home4jars.view.result.ResultActivity
 import groovy.transform.CompileStatic
 
