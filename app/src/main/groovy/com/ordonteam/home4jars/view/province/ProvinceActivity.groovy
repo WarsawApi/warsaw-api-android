@@ -6,10 +6,11 @@ import com.arasthel.swissknife.SwissKnife
 import com.arasthel.swissknife.annotations.OnClick
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.view.choose.ChooseActivity
+import com.ordonteam.home4jars.view.common.LoaderActivity
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class ProvinceActivity extends Activity {
+final class ProvinceActivity extends LoaderActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

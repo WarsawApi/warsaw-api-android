@@ -20,7 +20,6 @@ final class ChooseActivity extends SearchingActivity {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.choose_activity)
         SwissKnife.inject(this)
-        dismissLoader()
     }
 
     @OnClick(R.id.next)

@@ -9,12 +9,13 @@ import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.service.SearchParams
 import com.ordonteam.home4jars.service.SearchService
 import com.ordonteam.home4jars.view.common.EmptyTouchListener
+import com.ordonteam.home4jars.view.common.LoaderActivity
 import groovy.transform.CompileStatic
 import rx.Subscription
 import rx.android.schedulers.AndroidSchedulers
 
 @CompileStatic
-abstract class SearchingActivity extends Activity {
+abstract class SearchingActivity extends LoaderActivity {
 
     Subscription subscription
 
@@ -34,14 +35,5 @@ abstract class SearchingActivity extends Activity {
 
     void onError(Throwable throwable) {
         Log.e('SearchService', throwable.message, throwable)
-    }
-
-    void showLoader() {
-        findViewById(R.id.progress_bar).visibility = View.VISIBLE
-        findViewById(R.id.progress_bar).onTouchListener = new EmptyTouchListener()
-    }
-
-    void dismissLoader() {
-        findViewById(R.id.progress_bar).visibility = View.GONE
     }
 }
