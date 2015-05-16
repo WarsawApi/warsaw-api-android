@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Home4Jars</string>
     <string name="next">Dalej</string>
+    <string name="preference_title">Important for me</string>
 </resources>

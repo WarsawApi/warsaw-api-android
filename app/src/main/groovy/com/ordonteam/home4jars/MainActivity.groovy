@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.ordonteam.home4jars.view.Home4Jars
-import com.ordonteam.home4jars.view.province.ProvinceActivity
 import groovy.transform.CompileStatic
 
 @CompileStatic

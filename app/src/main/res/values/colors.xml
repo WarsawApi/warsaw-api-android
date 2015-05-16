@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="app_color">#1964a7</color>
     <color name="white_opacity_50">#7FFFFFFF</color>
+    <color name="title_background">#c0c030</color>
+    <color name="content_background">#00c0c0</color>
+    <color name="title_text">#000000</color>
 </resources>
