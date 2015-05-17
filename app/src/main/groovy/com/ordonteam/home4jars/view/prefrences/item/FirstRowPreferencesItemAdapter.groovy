@@ -33,8 +33,13 @@ final class FirstRowPreferencesItemAdapter implements ItemAdapter {
         holder.transportation.onClickListener = this.&onTransportationClick
     }
 
-    void onTransportationClick(View view){
-        preferencesAdapter.showInFirstAdditionalRow(new TransportationPreferencesItemAdapter())
+    void onTransportationClick(View view) {
+        TransportationPreferencesItemAdapter itemAdapter = new TransportationPreferencesItemAdapter()
+        if (preferencesAdapter.isShownInFirstAdditionalRow(itemAdapter)) {
+            preferencesAdapter.hideFirstAdditionalRow()
+        } else {
+            preferencesAdapter.showInFirstAdditionalRow(itemAdapter)
+        }
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

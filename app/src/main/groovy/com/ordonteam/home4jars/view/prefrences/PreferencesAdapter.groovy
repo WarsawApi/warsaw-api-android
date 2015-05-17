@@ -4,6 +4,7 @@ import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.prefrences.item.FirstRowPreferencesItemAdapter
 import com.ordonteam.home4jars.view.prefrences.item.SecondRowPreferencesItemAdapter
+import com.ordonteam.home4jars.view.prefrences.item.TransportationPreferencesItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
@@ -17,6 +18,10 @@ final class PreferencesAdapter extends BaseRecyclerViewAdapter {
         items.add(new SecondRowPreferencesItemAdapter(this))
     }
 
+    boolean isShownInFirstAdditionalRow(ItemAdapter itemAdapter){
+        return isFirstAdditionalRowVisible && items.get(1).viewType == itemAdapter.viewType
+    }
+
     void showInFirstAdditionalRow(ItemAdapter itemAdapter) {
         removeFirstAdditionalRow()
         removeSecondAdditionalRow()
@@ -24,6 +29,11 @@ final class PreferencesAdapter extends BaseRecyclerViewAdapter {
         isSecondAdditionalRowVisible = false
         items.add(1, itemAdapter)
         notifyItemInserted(1)
+    }
+
+    void hideFirstAdditionalRow() {
+        removeFirstAdditionalRow()
+        isFirstAdditionalRowVisible = false
     }
 
     void showInSecondAdditionalRow(ItemAdapter itemAdapter) {
