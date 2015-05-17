@@ -3,10 +3,16 @@ package com.ordonteam.home4jars.view.results
 import android.app.Activity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 import com.ordonteam.home4jars.R
+import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.dto.SearchResults
+import com.ordonteam.home4jars.service.SearchParams
+import com.ordonteam.home4jars.service.SearchService
 import groovy.transform.CompileStatic
+import rx.Subscription
+import rx.android.schedulers.AndroidSchedulers
 
 @CompileStatic
 final class ResultsController {
@@ -18,6 +24,7 @@ final class ResultsController {
     ResultsAdapter adapter
     View loader
     View content
+    Subscription subscription
 
     void init(Activity activity) {
         content = activity.findViewById(R.id.results_content)
@@ -26,7 +33,7 @@ final class ResultsController {
         recyclerView = activity.findViewById(R.id.results_recycler) as RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(activity))
 
-        adapter = new ResultsAdapter(searchResults)
+        adapter = new ResultsAdapter()
         recyclerView.setAdapter(adapter)
 
         title = activity.findViewById(R.id.results_title)
@@ -46,13 +53,19 @@ final class ResultsController {
         loader.visibility = View.VISIBLE
         title.backgroundResource = R.drawable.title_background
         title.onClickListener = this.&hideOnClick
-        loader.post{
-            onSuccess()
-        }
+
+        subscription = new SearchService().call(new SearchParams())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(this.&onSuccess, this.&onError)
     }
 
-    private void onSuccess() {
+    private void onSuccess(SearchResults searchResults) {
         loader.visibility = View.GONE
         recyclerView.visibility = View.VISIBLE
+        adapter.searchResults = searchResults
+    }
+
+    void onError(Throwable throwable) {
+        Log.e('SearchService', throwable.message, throwable)
     }
 }

@@ -10,9 +10,10 @@ import groovy.transform.TupleConstructor
 @TupleConstructor
 final class ResultsAdapter extends BaseRecyclerViewAdapter {
 
-    ResultsAdapter(SearchResults searchResults) {
+    void setSearchResults(SearchResults searchResults) {
         searchResults.items.each {
             items.add(new ResultItemAdapter(it))
         }
+        notifyDataSetChanged()
     }
 }

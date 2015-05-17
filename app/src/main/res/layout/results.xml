@@ -16,14 +16,14 @@
         android:id="@+id/results_content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="gone"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="@drawable/content_background"
+        android:visibility="gone">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/results_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/content_background"
             android:visibility="gone" />
 
         <ProgressBar
