@@ -1,7 +1,8 @@
 package com.ordonteam.home4jars.view.prefrences
 
 import com.ordonteam.home4jars.dto.FirstRowPreferences
-import com.ordonteam.home4jars.view.prefrences.item.TransportationPreferencesItemAdapter
+import com.ordonteam.home4jars.view.prefrences.item.first.NearbyPreferencesItemAdapter
+import com.ordonteam.home4jars.view.prefrences.item.first.TransportationPreferencesItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
@@ -12,5 +13,9 @@ final class FirstRowController {
 
     TransportationPreferencesItemAdapter getTransportationItem() {
         return new TransportationPreferencesItemAdapter(firstRowPreferences.transportationPreferences)
+    }
+
+    NearbyPreferencesItemAdapter getNearbyItem() {
+        return new NearbyPreferencesItemAdapter(firstRowPreferences.nearbyPreferences)
     }
 }

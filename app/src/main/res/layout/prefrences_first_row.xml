@@ -7,6 +7,7 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
+        android:id="@+id/nearby"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"

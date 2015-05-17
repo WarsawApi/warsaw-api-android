@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.prefrences.item
+package com.ordonteam.home4jars.view.prefrences.item.first
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -9,17 +9,14 @@ import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.prefrences.FirstRowController
 import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
 import groovy.transform.CompileStatic
+import groovy.transform.TupleConstructor
 
 @CompileStatic
+@TupleConstructor
 final class FirstRowPreferencesItemAdapter implements ItemAdapter {
 
     PreferencesAdapter preferencesAdapter
     FirstRowController firstRowController
-
-    FirstRowPreferencesItemAdapter(PreferencesAdapter preferencesAdapter, FirstRowController firstRowController) {
-        this.preferencesAdapter = preferencesAdapter
-        this.firstRowController = firstRowController
-    }
 
     @Override
     int getViewType() {
@@ -35,7 +32,17 @@ final class FirstRowPreferencesItemAdapter implements ItemAdapter {
     @Override
     void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
         Holder holder = viewHolder as Holder
+        holder.nearby.onClickListener = this.&onNearbyClick
         holder.transportation.onClickListener = this.&onTransportationClick
+    }
+
+    void onNearbyClick(View view) {
+        NearbyPreferencesItemAdapter itemAdapter = firstRowController.getNearbyItem()
+        if (preferencesAdapter.isShownInFirstAdditionalRow(itemAdapter)) {
+            preferencesAdapter.hideFirstAdditionalRow()
+        } else {
+            preferencesAdapter.showInFirstAdditionalRow(itemAdapter)
+        }
     }
 
     void onTransportationClick(View view) {
@@ -49,10 +56,12 @@ final class FirstRowPreferencesItemAdapter implements ItemAdapter {
 
     final static class Holder extends RecyclerView.ViewHolder {
 
+        View nearby
         View transportation
 
         Holder(View itemView) {
             super(itemView)
+            nearby = itemView.findViewById(R.id.nearby)
             transportation = itemView.findViewById(R.id.preferences_transportation)
         }
     }

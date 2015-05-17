@@ -1,11 +1,10 @@
 package com.ordonteam.home4jars.view.prefrences
 
-import com.ordonteam.home4jars.dto.FirstRowPreferences
 import com.ordonteam.home4jars.dto.Preferences
 import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
 import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.prefrences.item.FirstRowPreferencesItemAdapter
-import com.ordonteam.home4jars.view.prefrences.item.SecondRowPreferencesItemAdapter
+import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesItemAdapter
+import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
