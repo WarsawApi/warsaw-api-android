@@ -11,6 +11,7 @@ class SearchResult implements Parcelable{
     String longitude
     String address
     String url
+    String imageUrl
     Distances distances
 
     String getMarkerString() {
