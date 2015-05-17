@@ -39,7 +39,7 @@ final class ResultItemAdapter implements ItemAdapter {
     @Override
     void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
         Holder holder = viewHolder as Holder
-        Glide.with(holder.itemView.context).load(searchResult.imageUrl).into(holder.imageView)
+        Glide.with(holder.itemView.context).load(searchResult.imageUrl).placeholder(R.drawable.map_marker).into(holder.imageView)
         holder.addressView.text = searchResult.address
         holder.urlView.text = searchResult.url
         holder.priceView.text = searchResult.price
