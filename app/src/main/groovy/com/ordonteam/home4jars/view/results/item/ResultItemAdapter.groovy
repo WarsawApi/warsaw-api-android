@@ -1,5 +1,7 @@
 package com.ordonteam.home4jars.view.results.item
 
+import android.content.Intent
+import android.net.Uri
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +41,13 @@ final class ResultItemAdapter implements ItemAdapter {
         Holder holder = viewHolder as Holder
         Glide.with(holder.itemView.context).load(searchResult.imageUrl).into(holder.imageView)
         holder.addressView.text = searchResult.address
+        holder.itemView.onClickListener = this.&onClick
+    }
+
+    void onClick(View view){
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(searchResult.url));
+        view.context.startActivity(i);
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
