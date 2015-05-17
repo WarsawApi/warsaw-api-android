@@ -31,7 +31,7 @@
         android:layout_margin="@dimen/margin_large"
         android:layout_weight="1"
         android:background="@drawable/selectable"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/on_foot" />
 </LinearLayout>
 
         
