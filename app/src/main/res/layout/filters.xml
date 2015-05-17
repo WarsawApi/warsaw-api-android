@@ -7,6 +7,7 @@
         android:id="@+id/filters_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:background="@drawable/title_background_collapsed"
         android:padding="@dimen/margin_large"
         android:text="@string/filters_title"

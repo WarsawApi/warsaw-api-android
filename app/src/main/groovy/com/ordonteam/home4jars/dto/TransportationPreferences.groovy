@@ -5,6 +5,6 @@ import groovy.transform.CompileStatic
 @CompileStatic
 final class TransportationPreferences {
     boolean subway
-    boolean tramway = true
+    boolean tramway
     boolean onFoot
 }

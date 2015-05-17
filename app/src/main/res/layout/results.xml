@@ -10,7 +10,8 @@
         android:background="@drawable/title_background_collapsed"
         android:padding="@dimen/margin_large"
         android:text="@string/results_title"
-        android:textColor="@color/title_text" />
+        android:textColor="@color/title_text"
+        android:textStyle="bold" />
 
     <FrameLayout
         android:id="@+id/results_content"

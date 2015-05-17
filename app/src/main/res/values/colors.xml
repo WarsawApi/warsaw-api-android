@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="app_color">#1964a7</color>
+    <color name="app_color">#cccccc</color>
     <color name="white_opacity_50">#7FFFFFFF</color>
     <color name="title_background">#34495e</color>
     <color name="content_background">#16a085</color>
