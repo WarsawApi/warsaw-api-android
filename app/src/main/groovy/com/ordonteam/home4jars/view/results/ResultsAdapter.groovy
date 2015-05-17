@@ -12,6 +12,7 @@ import groovy.transform.TupleConstructor
 final class ResultsAdapter extends BaseRecyclerViewAdapter {
 
     void setSearchResults(SearchResults searchResults) {
+        items.clear()
         searchResults.items.each {
             items.add(new ResultItemAdapter(it))
         }
