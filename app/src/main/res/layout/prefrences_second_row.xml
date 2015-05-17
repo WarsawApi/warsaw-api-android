@@ -9,6 +9,7 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
+        android:id="@+id/preferences_entertainment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_large"
