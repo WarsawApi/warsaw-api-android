@@ -3,6 +3,7 @@ package com.ordonteam.home4jars.service
 import com.google.gson.Gson
 import com.ordonteam.home4jars.BuildConfig
 import com.ordonteam.home4jars.api.SearchApi
+import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.dto.SearchResults
 import com.squareup.okhttp.OkHttpClient
 import groovy.transform.CompileStatic
@@ -25,6 +26,11 @@ class SearchService {
     }
 
     rx.Observable<SearchResults> call(SearchParams params) {
-        return searchApi.call(params.school, params.metro)
+        return searchApi.call(params.school, params.metro).map(this.&take5)
+    }
+
+    SearchResults take5(SearchResults searchResults){
+        searchResults.items = searchResults.items.take(5)
+        return searchResults
     }
 }

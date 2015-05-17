@@ -8,6 +8,11 @@ import groovy.transform.CompileStatic
 final class SearchResults implements Parcelable {
     List<SearchResult> items
 
+    String getMapUrl() {
+        String markers = items.collect { it.markerString }.join('&')
+        return "https://maps.googleapis.com/maps/api/staticmap?center=${items.first().coordsAsString}&zoom=14&size=700x300&scale=2&${markers}"
+    }
+
     @Override
     int describeContents() {
         return 0

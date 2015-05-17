@@ -5,7 +5,7 @@ import android.os.Parcelable
 import groovy.transform.CompileStatic
 
 @CompileStatic
-class SearchResult implements Parcelable{
+class SearchResult implements Parcelable {
     String id
     String latitude
     String longitude
@@ -41,6 +41,10 @@ class SearchResult implements Parcelable{
     }
 
     public static final Parcelable.Creator<SearchResult> CREATOR = new CreatorImpl()
+
+    String getCoordsAsString() {
+        return "${latitude},${longitude}"
+    }
 
     static final class CreatorImpl implements Parcelable.Creator<SearchResult> {
 
