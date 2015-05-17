@@ -6,11 +6,10 @@ import com.ordonteam.home4jars.view.prefrences.item.SecondRowPreferencesItemAdap
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class PreferencesAdapter extends BaseRecyclerViewAdapter{
+final class PreferencesAdapter extends BaseRecyclerViewAdapter {
     PreferencesAdapter() {
         items.add(new FirstRowPreferencesItemAdapter())
         items.add(new SecondRowPreferencesItemAdapter())
     }
-
 
 }

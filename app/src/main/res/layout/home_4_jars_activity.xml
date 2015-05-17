@@ -2,15 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/margin_small"
     android:orientation="vertical">
-
-    <TextView
-        android:background="@color/app_color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/margin_large"
-        android:text="@string/app_name" />
 
     <include layout="@layout/preferences" />
 

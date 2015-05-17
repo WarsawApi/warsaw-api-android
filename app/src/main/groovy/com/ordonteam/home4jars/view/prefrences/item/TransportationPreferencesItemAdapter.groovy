@@ -17,7 +17,7 @@ final class TransportationPreferencesItemAdapter implements ItemAdapter {
 
     @Override
     RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.prefrences_first_row)
+        View view = InflateHelper.inflate(parent, R.layout.prefrences_transportation_row)
         return new Holder(view)
     }
 

@@ -22,14 +22,22 @@ final class FirstRowPreferencesItemAdapter implements ItemAdapter {
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder holder) {
+    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
+        Holder holder = viewHolder as Holder
+        holder.transportation.onClickListener = this.&onTransportationClick
+    }
+
+    void onTransportationClick(View view){
 
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
 
+        View transportation
+
         Holder(View itemView) {
             super(itemView)
+            transportation = itemView.findViewById(R.id.preferences_transportation)
         }
     }
 }

@@ -3,18 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/home_4_jars_activity">
 
-    <TextView
+    <Button
+        android:id="@+id/preferences_title"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/title_background"
-        android:textColor="@color/title_text"
-        android:padding="@dimen/margin_small"
+        android:padding="@dimen/margin_large"
         android:text="@string/preference_title"
-        android:layout_height="wrap_content" />
+        android:textColor="@color/title_text" />
 
     <android.support.v7.widget.RecyclerView
-        android:background="@drawable/content_background"
         android:id="@+id/preferences_recycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/content_background" />
 
 </merge>

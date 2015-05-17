@@ -14,7 +14,6 @@
         android:src="@drawable/nearby" />
 
     <ImageView
-        android:id="@+id/preferences_transportation"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_large"
