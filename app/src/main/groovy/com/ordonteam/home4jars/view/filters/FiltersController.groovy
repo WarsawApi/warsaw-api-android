@@ -1,27 +1,27 @@
-package com.ordonteam.home4jars.view.prefrences
+package com.ordonteam.home4jars.view.filters
 
 import android.app.Activity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.Preferences
+import com.ordonteam.home4jars.dto.Filters
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class PreferenceController {
-    final Preferences preferences = new Preferences()
+final class FiltersController {
     RecyclerView recyclerView
     View title
-    PreferencesAdapter adapter
+    FiltersAdapter adapter
 
-    void init(Activity activity) {
-        recyclerView = activity.findViewById(R.id.preferences_recycler) as RecyclerView
+    void init(Activity activity, Filters filters) {
+        recyclerView = activity.findViewById(R.id.filters_recycler) as RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(activity))
-        adapter = new PreferencesAdapter(new FirstRowController(preferences.firstRowPreferences))
+
+        adapter = new FiltersAdapter(filters)
         recyclerView.setAdapter(adapter)
 
-        title = activity.findViewById(R.id.preferences_title)
+        title = activity.findViewById(R.id.filters_title)
         title.onClickListener = this.&hideOnClick
     }
 

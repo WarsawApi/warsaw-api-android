@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
+        android:background="@color/main_icons_background"
         android:src="@drawable/entertainment" />
 
     <ImageView
@@ -19,6 +20,7 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
+        android:background="@color/main_icons_background"
         android:src="@drawable/sport" />
 
     <ImageView
@@ -26,5 +28,6 @@
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
+        android:background="@color/main_icons_background"
         android:src="@drawable/recreation" />
 </LinearLayout>
