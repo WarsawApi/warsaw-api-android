@@ -2,14 +2,12 @@ package com.ordonteam.home4jars.view
 
 import android.app.Activity
 import android.os.Bundle
-import android.preference.Preference
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.Filters
+import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.view.filters.FiltersController
 import com.ordonteam.home4jars.view.prefrences.PreferenceController
-import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
+import com.ordonteam.home4jars.view.results.ResultsController
 import groovy.transform.CompileStatic
 
 @CompileStatic
@@ -17,6 +15,7 @@ final class Home4Jars extends Activity {
 
     PreferenceController preferenceController = new PreferenceController()
     FiltersController filtersController = new FiltersController()
+    ResultsController resultsController = new ResultsController()
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +24,7 @@ final class Home4Jars extends Activity {
 
         preferenceController.init(this)
         filtersController.init(this,new Filters())
+        resultsController.init(this, new SearchResults())
     }
 
     @Override
