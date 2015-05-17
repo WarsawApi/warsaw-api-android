@@ -4,14 +4,18 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.common.Bus
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.prefrences.event.EntertainmentClickEvent
+import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
 import groovy.transform.CompileStatic
+import groovy.transform.TupleConstructor
 
 @CompileStatic
+@TupleConstructor
 final class SecondRowPreferencesItemAdapter implements ItemAdapter {
+
+    PreferencesAdapter adapter
+
     @Override
     int getViewType() {
         return 2
@@ -30,7 +34,7 @@ final class SecondRowPreferencesItemAdapter implements ItemAdapter {
     }
 
     void onEntertainmentClick(View view) {
-        Bus.post(new EntertainmentClickEvent())
+        adapter.showInSecondAdditionalRow(new EntertainmentPreferencesItemAdapter())
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

@@ -4,15 +4,11 @@
     tools:showIn="@layout/home_4_jars_activity">
 
 
-    <TextView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </TextView>
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_background_collapsed"
+        android:padding="@dimen/margin_large"
+        android:text="@string/results_title"
+        android:textColor="@color/title_text" />
 </merge>

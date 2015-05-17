@@ -2,4 +2,6 @@
     <string name="app_name">Home4Jars</string>
     <string name="next">Dalej</string>
     <string name="preference_title">Important for me</string>
+    <string name="filters_title">Filters</string>
+    <string name="results_title">Results</string>
 </resources>

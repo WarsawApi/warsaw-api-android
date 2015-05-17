@@ -26,12 +26,12 @@ final class Home4Jars extends Activity {
     @Override
     protected void onResume() {
         super.onResume()
-        preferenceController.onResume()
+//        preferenceController.onResume()
     }
 
     @Override
     protected void onPause() {
         super.onPause()
-        preferenceController.onPause()
+//        preferenceController.onPause()
     }
 }

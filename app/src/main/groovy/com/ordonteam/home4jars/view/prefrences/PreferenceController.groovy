@@ -5,15 +5,10 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.common.Bus
-import com.ordonteam.home4jars.view.prefrences.event.EntertainmentClickEvent
-import com.ordonteam.home4jars.view.prefrences.event.TransportationClickEvent
-import com.ordonteam.home4jars.view.prefrences.item.EntertainmentPreferencesItemAdapter
-import com.ordonteam.home4jars.view.prefrences.item.TransportationPreferencesItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class PreferenceController implements Bus.Listener {
+final class PreferenceController {
     RecyclerView recyclerView
     View title
     PreferencesAdapter adapter
@@ -26,24 +21,6 @@ final class PreferenceController implements Bus.Listener {
 
         title = activity.findViewById(R.id.preferences_title)
         title.onClickListener = this.&hideOnClick
-    }
-
-    void onResume() {
-        Bus.register(this)
-    }
-
-    void onPause() {
-        Bus.unregister(this)
-    }
-
-    @SuppressWarnings('unused')
-    void onEvent(TransportationClickEvent event) {
-        adapter.showInFirstAdditionalRow(new TransportationPreferencesItemAdapter())
-    }
-
-    @SuppressWarnings('unused')
-    void onEvent(EntertainmentClickEvent event) {
-        adapter.showInSecondAdditionalRow(new EntertainmentPreferencesItemAdapter())
     }
 
     void hideOnClick(View view) {

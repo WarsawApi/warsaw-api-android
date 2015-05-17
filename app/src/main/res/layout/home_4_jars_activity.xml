@@ -2,12 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/margin_small"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    android:padding="@dimen/margin_small">
 
     <include layout="@layout/preferences" />
 
+    <include layout="@layout/separator" />
+
     <include layout="@layout/filters" />
+
+    <include layout="@layout/separator" />
 
     <include layout="@layout/results" />
 </LinearLayout>

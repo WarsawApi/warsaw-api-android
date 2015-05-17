@@ -3,16 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:showIn="@layout/home_4_jars_activity">
 
-
-    <TextView
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_background_collapsed"
+        android:padding="@dimen/margin_large"
+        android:text="@string/filters_title"
+        android:textColor="@color/title_text" />
 
-    </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </TextView>
 </merge>
