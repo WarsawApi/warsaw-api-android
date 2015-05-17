@@ -7,25 +7,28 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
+        android:id="@+id/subway"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_large"
         android:layout_weight="1"
-        android:src="@drawable/nearby" />
+        android:src="@drawable/subway" />
 
     <ImageView
+        android:id="@+id/tramway"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_large"
         android:layout_weight="1"
-        android:src="@drawable/transportation" />
+        android:src="@drawable/tramway" />
 
     <ImageView
+        android:id="@+id/on_foot"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/margin_large"
         android:layout_weight="1"
-        android:src="@drawable/culture" />
+        android:src="@drawable/ic_launcher" />
 </LinearLayout>
 
         

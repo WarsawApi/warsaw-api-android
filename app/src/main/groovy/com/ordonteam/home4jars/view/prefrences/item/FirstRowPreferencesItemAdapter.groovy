@@ -6,15 +6,20 @@ import android.view.ViewGroup
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.prefrences.FirstRowController
 import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
 import groovy.transform.CompileStatic
-import groovy.transform.TupleConstructor
 
 @CompileStatic
-@TupleConstructor
 final class FirstRowPreferencesItemAdapter implements ItemAdapter {
 
     PreferencesAdapter preferencesAdapter
+    FirstRowController firstRowController
+
+    FirstRowPreferencesItemAdapter(PreferencesAdapter preferencesAdapter, FirstRowController firstRowController) {
+        this.preferencesAdapter = preferencesAdapter
+        this.firstRowController = firstRowController
+    }
 
     @Override
     int getViewType() {
@@ -34,7 +39,7 @@ final class FirstRowPreferencesItemAdapter implements ItemAdapter {
     }
 
     void onTransportationClick(View view) {
-        TransportationPreferencesItemAdapter itemAdapter = new TransportationPreferencesItemAdapter()
+        TransportationPreferencesItemAdapter itemAdapter = firstRowController.getTransportationItem()
         if (preferencesAdapter.isShownInFirstAdditionalRow(itemAdapter)) {
             preferencesAdapter.hideFirstAdditionalRow()
         } else {
