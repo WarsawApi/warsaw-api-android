@@ -10,7 +10,7 @@
         android:id="@+id/subway"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
         android:background="@drawable/selectable"
         android:src="@drawable/subway" />
@@ -19,7 +19,7 @@
         android:id="@+id/tramway"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
         android:background="@drawable/selectable"
         android:src="@drawable/tramway" />
@@ -28,7 +28,7 @@
         android:id="@+id/on_foot"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
         android:background="@drawable/selectable"
         android:src="@drawable/on_foot" />

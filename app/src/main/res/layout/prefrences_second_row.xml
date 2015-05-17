@@ -10,21 +10,21 @@
         android:id="@+id/preferences_entertainment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
         android:src="@drawable/entertainment" />
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
         android:src="@drawable/sport" />
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_large"
+        android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
         android:src="@drawable/recreation" />
 </LinearLayout>

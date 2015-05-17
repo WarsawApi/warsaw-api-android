@@ -3,4 +3,5 @@
     <dimen name="margin_large">10dp</dimen>
     <dimen name="margin_small">5dp</dimen>
     <dimen name="corner_radius">5dp</dimen>
+    <dimen name="icons_margin">10dp</dimen>
 </resources>
