@@ -42,6 +42,7 @@ final class ResultItemAdapter implements ItemAdapter {
         Glide.with(holder.itemView.context).load(searchResult.imageUrl).into(holder.imageView)
         holder.addressView.text = searchResult.address
         holder.urlView.text = searchResult.url
+        holder.priceView.text = searchResult.price
         holder.itemView.onClickListener = this.&onClick
     }
 
@@ -55,12 +56,14 @@ final class ResultItemAdapter implements ItemAdapter {
 
         ImageView imageView
         TextView addressView
+        TextView priceView
         TextView urlView
 
         Holder(View itemView) {
             super(itemView)
             imageView = itemView.findViewById(R.id.result_image) as ImageView
             addressView = itemView.findViewById(R.id.result_address) as TextView
+            priceView = itemView.findViewById(R.id.result_price) as TextView
             urlView = itemView.findViewById(R.id.result_url) as TextView
         }
     }
