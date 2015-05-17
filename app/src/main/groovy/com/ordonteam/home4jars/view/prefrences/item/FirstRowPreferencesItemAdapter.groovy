@@ -4,8 +4,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import com.ordonteam.home4jars.R
+import com.ordonteam.home4jars.common.Bus
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.prefrences.event.TransportationClickEvent
 import groovy.transform.CompileStatic
 
 @CompileStatic
@@ -28,7 +30,7 @@ final class FirstRowPreferencesItemAdapter implements ItemAdapter {
     }
 
     void onTransportationClick(View view){
-
+        Bus.post(new TransportationClickEvent())
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
