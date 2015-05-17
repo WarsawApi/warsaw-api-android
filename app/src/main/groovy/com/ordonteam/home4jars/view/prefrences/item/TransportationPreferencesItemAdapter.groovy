@@ -15,7 +15,6 @@ import groovy.transform.TupleConstructor
 final class TransportationPreferencesItemAdapter implements ItemAdapter {
 
     TransportationPreferences transportationPreferences
-
     @Override
     int getViewType() {
         return 12
@@ -31,8 +30,26 @@ final class TransportationPreferencesItemAdapter implements ItemAdapter {
     void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
         Holder holder = viewHolder as Holder
         holder.subway.selected = transportationPreferences.subway
-        holder.tramway.selected = transportationPreferences.subway
-        holder.subway.selected = transportationPreferences.subway
+        holder.subway.onClickListener = this.&onSubwayClick
+        holder.tramway.selected = transportationPreferences.tramway
+        holder.tramway.onClickListener = this.&onTramwayClick
+        holder.onFoot.selected = transportationPreferences.onFoot
+        holder.onFoot.onClickListener = this.&onOnFootClick
+    }
+
+    void onSubwayClick(View view){
+        view.selected = !view.selected
+        transportationPreferences.subway = view.selected
+    }
+
+    void onTramwayClick(View view){
+        view.selected = !view.selected
+        transportationPreferences.tramway = view.selected
+    }
+
+    void onOnFootClick(View view){
+        view.selected = !view.selected
+        transportationPreferences.onFoot = view.selected
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
