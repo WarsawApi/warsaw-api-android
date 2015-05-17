@@ -24,7 +24,7 @@ final class Home4Jars extends Activity {
 
         preferenceController.init(this)
         filtersController.init(this,new Filters())
-        resultsController.init(this, new SearchResults())
+        resultsController.init(this)
     }
 
     @Override
