@@ -2,10 +2,10 @@
 <resources>
     <color name="app_color">#1964a7</color>
     <color name="white_opacity_50">#7FFFFFFF</color>
-    <color name="title_background">#c0c030</color>
-    <color name="content_background">#000000</color>
-    <color name="title_text">#000000</color>
-    <color name="selected_background">#123456</color>
-    <color name="unselected_background">#654321</color>
-    <color name="main_icons_background">#1964a7</color>
+    <color name="title_background">#34495e</color>
+    <color name="content_background">#16a085</color>
+    <color name="title_text">#ffffff</color>
+    <color name="selected_background">#2ecc71</color>
+    <color name="unselected_background">#27ae60</color>
+    <color name="main_icons_background">#1abc9c</color>
 </resources>
