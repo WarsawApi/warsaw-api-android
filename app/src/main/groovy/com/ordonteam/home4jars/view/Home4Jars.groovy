@@ -4,7 +4,6 @@ import android.app.Activity
 import android.os.Bundle
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.Filters
-import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.view.filters.FiltersController
 import com.ordonteam.home4jars.view.prefrences.PreferenceController
 import com.ordonteam.home4jars.view.results.ResultsController

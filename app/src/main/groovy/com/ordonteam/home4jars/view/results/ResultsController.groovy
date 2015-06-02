@@ -6,7 +6,6 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.service.SearchParams
 import com.ordonteam.home4jars.service.SearchService

@@ -1,6 +1,5 @@
 package com.ordonteam.home4jars.dto
 
-import android.content.DialogInterface
 import android.os.Parcel
 import android.os.Parcelable
 import groovy.transform.CompileStatic

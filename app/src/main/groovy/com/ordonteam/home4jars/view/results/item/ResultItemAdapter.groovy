@@ -12,10 +12,6 @@ import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.prefrences.FirstRowController
-import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
-import com.ordonteam.home4jars.view.prefrences.item.first.NearbyPreferencesItemAdapter
-import com.ordonteam.home4jars.view.prefrences.item.first.TransportationPreferencesItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 

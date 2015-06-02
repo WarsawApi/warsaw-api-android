@@ -3,7 +3,6 @@ package com.ordonteam.home4jars.service
 import com.google.gson.Gson
 import com.ordonteam.home4jars.BuildConfig
 import com.ordonteam.home4jars.api.SearchApi
-import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.dto.SearchResults
 import com.squareup.okhttp.OkHttpClient
 import groovy.transform.CompileStatic

@@ -1,7 +1,6 @@
 package com.ordonteam.home4jars.view.common
 
 import android.app.Activity
-import android.os.Bundle
 import android.view.View
 import com.ordonteam.home4jars.R
 import groovy.transform.CompileStatic

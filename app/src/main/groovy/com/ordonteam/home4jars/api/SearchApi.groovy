@@ -1,10 +1,9 @@
 package com.ordonteam.home4jars.api
 
-import com.ordonteam.home4jars.dto.SearchResult
-import com.ordonteam.home4jars.dto.SearchResults;
+import com.ordonteam.home4jars.dto.SearchResults
 import groovy.transform.CompileStatic
 import retrofit.http.GET
-import retrofit.http.Query;
+import retrofit.http.Query
 
 @CompileStatic
 interface SearchApi {
