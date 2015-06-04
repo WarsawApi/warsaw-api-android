@@ -12,7 +12,6 @@ class SearchResult implements Parcelable {
     String address
     String url
     String imageUrl
-    Distances distances
     String price
 
     String getMarkerString() {
@@ -38,7 +37,6 @@ class SearchResult implements Parcelable {
         dest.writeString(longitude)
         dest.writeString(address)
         dest.writeString(url)
-        dest.writeParcelable(distances, flags)
     }
 
     public static final Parcelable.Creator<SearchResult> CREATOR = new CreatorImpl()
@@ -57,7 +55,6 @@ class SearchResult implements Parcelable {
                     longitude: source.readString(),
                     address: source.readString(),
                     url: source.readString(),
-                    distances: source.readParcelable(SearchResult.classLoader) as Distances
             )
         }
 

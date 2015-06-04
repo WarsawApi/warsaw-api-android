@@ -1,6 +1,6 @@
 package com.ordonteam.home4jars.view.filters
 
-import com.ordonteam.home4jars.dto.Filters
+import com.ordonteam.home4jars.dto.filters.Filters
 import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
 import groovy.transform.CompileStatic
 

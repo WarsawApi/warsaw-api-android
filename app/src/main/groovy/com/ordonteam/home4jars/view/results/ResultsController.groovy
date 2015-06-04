@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResults
-import com.ordonteam.home4jars.service.SearchParams
+import com.ordonteam.home4jars.dto.preferences.Preferences
 import com.ordonteam.home4jars.service.SearchService
 import groovy.transform.CompileStatic
 import rx.Subscription
@@ -53,7 +53,7 @@ final class ResultsController {
         title.backgroundResource = R.drawable.title_background
         title.onClickListener = this.&hideOnClick
 
-        subscription = new SearchService().call(new SearchParams())
+        subscription = new SearchService().call(new Preferences())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this.&onSuccess, this.&onError)
     }

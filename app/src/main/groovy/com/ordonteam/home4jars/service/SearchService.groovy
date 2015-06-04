@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import com.ordonteam.home4jars.BuildConfig
 import com.ordonteam.home4jars.api.SearchApi
 import com.ordonteam.home4jars.dto.SearchResults
+import com.ordonteam.home4jars.dto.preferences.Preferences
 import com.squareup.okhttp.OkHttpClient
 import groovy.transform.CompileStatic
 import retrofit.RestAdapter
@@ -24,8 +25,8 @@ class SearchService {
         searchApi = adapter.create(SearchApi)
     }
 
-    rx.Observable<SearchResults> call(SearchParams params) {
-        return searchApi.call(params.school, params.metro).map(this.&take5)
+    rx.Observable<SearchResults> call(Preferences preferences) {
+        return searchApi.call(preferences).map(this.&take5)
     }
 
     SearchResults take5(SearchResults searchResults){

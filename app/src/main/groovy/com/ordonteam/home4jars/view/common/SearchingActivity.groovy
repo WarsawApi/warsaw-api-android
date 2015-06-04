@@ -2,6 +2,7 @@ package com.ordonteam.home4jars.view.common
 
 import android.util.Log
 import com.ordonteam.home4jars.dto.SearchResults
+import com.ordonteam.home4jars.dto.preferences.Preferences
 import com.ordonteam.home4jars.service.SearchParams
 import com.ordonteam.home4jars.service.SearchService
 import groovy.transform.CompileStatic
@@ -15,7 +16,7 @@ abstract class SearchingActivity extends LoaderActivity {
 
     void search(SearchParams params) {
         showLoader()
-        subscription = new SearchService().call(params)
+        subscription = new SearchService().call(new Preferences())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this.&onSuccessWrapper, this.&onError)
     }

@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.Preferences
+import com.ordonteam.home4jars.dto.preferences.Preferences
 import groovy.transform.CompileStatic
 
 @CompileStatic
@@ -18,7 +18,7 @@ final class PreferenceController {
     void init(Activity activity) {
         recyclerView = activity.findViewById(R.id.preferences_recycler) as RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(activity))
-        adapter = new PreferencesAdapter(new FirstRowController(preferences.firstRowPreferences))
+        adapter = new PreferencesAdapter(new FirstRowController(preferences))
         recyclerView.setAdapter(adapter)
 
         title = activity.findViewById(R.id.preferences_title)

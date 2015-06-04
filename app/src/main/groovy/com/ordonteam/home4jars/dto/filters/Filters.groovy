@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.dto
+package com.ordonteam.home4jars.dto.filters
 
 import groovy.transform.CompileStatic
 

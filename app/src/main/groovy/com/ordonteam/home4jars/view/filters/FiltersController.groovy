@@ -5,7 +5,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.Filters
+import com.ordonteam.home4jars.dto.filters.Filters
 import groovy.transform.CompileStatic
 
 @CompileStatic

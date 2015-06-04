@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.dto
+package com.ordonteam.home4jars.dto.preferences
 
 import groovy.transform.CompileStatic
 
