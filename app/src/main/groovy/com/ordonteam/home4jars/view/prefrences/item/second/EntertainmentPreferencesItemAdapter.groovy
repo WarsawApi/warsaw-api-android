@@ -5,7 +5,10 @@ import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.EntertainmentPreferences
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.common.ItemGroup
 import groovy.transform.CompileStatic
+
+import static com.ordonteam.home4jars.view.common.ItemGroup.SECOND_ADDITIONAL_ROWS
 
 @CompileStatic
 final class EntertainmentPreferencesItemAdapter extends ItemAdapter<Holder> {
@@ -15,6 +18,11 @@ final class EntertainmentPreferencesItemAdapter extends ItemAdapter<Holder> {
     @Override
     int getViewType() {
         return R.layout.prefrences_entertianment_row
+    }
+
+    @Override
+    boolean match(ItemGroup itemGroup) {
+        return itemGroup == SECOND_ADDITIONAL_ROWS
     }
 
     @Override

@@ -7,28 +7,31 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
-        android:id="@+id/preferences_entertainment"
+        android:id="@+id/sport_fitness"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/entertainment" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/sport_fitness" />
 
     <ImageView
-        android:id="@+id/preferences_sport"
+        android:id="@+id/sport_pools"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/sport" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/sport_pools" />
 
     <ImageView
+        android:id="@+id/sport_tennis"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/recreation" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/sport_tennis" />
 </LinearLayout>
+
+        

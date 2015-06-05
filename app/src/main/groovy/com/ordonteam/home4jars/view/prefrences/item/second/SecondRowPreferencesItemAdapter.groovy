@@ -27,19 +27,26 @@ final class SecondRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
     @Override
     void onBindViewHolder(Holder holder) {
         holder.entertainment.onClickListener = this.&onEntertainmentClick
+        holder.sport.onClickListener = this.&onSportClick
     }
 
     void onEntertainmentClick(View view) {
         replace(new EntertainmentPreferencesItemAdapter())
     }
 
+    void onSportClick(View view) {
+        replace(new SportPreferencesItemAdapter())
+    }
+
     final static class Holder extends RecyclerView.ViewHolder {
 
         View entertainment
+        View sport
 
         Holder(View itemView) {
             super(itemView)
             entertainment = itemView.findViewById(R.id.preferences_entertainment)
+            sport = itemView.findViewById(R.id.preferences_sport)
         }
     }
 }
