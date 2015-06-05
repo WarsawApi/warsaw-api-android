@@ -18,7 +18,7 @@ import groovy.transform.TupleConstructor
 import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
 
 @CompileStatic
-@TupleConstructor
+@TupleConstructor(includeSuperProperties = true)
 final class FirstRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
 
     final ItemGroup itemGroup = FIRST_ADDITIONAL_ROWS

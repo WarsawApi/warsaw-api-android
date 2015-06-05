@@ -2,19 +2,17 @@ package com.ordonteam.home4jars.view.prefrences.item.second
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.view.ViewGroup
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.view.common.InflateHelper
-import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
+import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.common.SectionItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
 @CompileStatic
-@TupleConstructor
-final class SecondRowPreferencesItemAdapter extends ItemAdapter<Holder> {
+@TupleConstructor(includeSuperProperties = true)
+final class SecondRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
 
-    PreferencesAdapter adapter
+    final ItemGroup itemGroup = ItemGroup.SECOND_ADDITIONAL_ROWS
 
     @Override
     int getViewType() {
@@ -32,7 +30,7 @@ final class SecondRowPreferencesItemAdapter extends ItemAdapter<Holder> {
     }
 
     void onEntertainmentClick(View view) {
-        adapter.showInSecondAdditionalRow(new EntertainmentPreferencesItemAdapter())
+        replace(new EntertainmentPreferencesItemAdapter())
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
