@@ -2,33 +2,37 @@ package com.ordonteam.home4jars.view.prefrences.item.first
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.view.ViewGroup
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.NearbyPreferences
-import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.common.ItemGroup
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
+import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+
 @CompileStatic
 @TupleConstructor
-final class NearbyPreferencesItemAdapter implements ItemAdapter {
+final class NearbyPreferencesItemAdapter extends ItemAdapter<Holder> {
 
     NearbyPreferences nearbyPreferences
     @Override
     int getViewType() {
-        return 11
+        return R.layout.prefrences_nearby_row
     }
 
     @Override
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.prefrences_transportation_row)
+    Holder onCreateViewHolder(View view) {
         return new Holder(view)
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
-        Holder holder = viewHolder as Holder
+    void onBindViewHolder(Holder viewHolder) {
+    }
+
+    @Override
+    boolean match(ItemGroup itemGroup) {
+        return itemGroup == FIRST_ADDITIONAL_ROWS
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

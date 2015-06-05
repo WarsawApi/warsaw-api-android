@@ -1,15 +1,20 @@
 package com.ordonteam.home4jars.view.common;
 
 import android.support.v7.widget.RecyclerView
+import android.view.View
 import android.view.ViewGroup
 import groovy.transform.CompileStatic
 
 @CompileStatic
-public interface ItemAdapter {
+abstract class ItemAdapter<VH extends RecyclerView.ViewHolder> {
 
-    int getViewType()
+    abstract int getViewType()
 
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent)
+    abstract VH onCreateViewHolder(View view)
 
-    void onBindViewHolder(RecyclerView.ViewHolder holder)
+    abstract void onBindViewHolder(VH viewHolder)
+
+    boolean match(ItemGroup itemGroup){
+        return false
+    }
 }

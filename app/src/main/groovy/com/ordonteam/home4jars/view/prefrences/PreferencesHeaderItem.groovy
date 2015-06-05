@@ -1,18 +1,16 @@
-package com.ordonteam.home4jars.view.prefrences.item.second
+package com.ordonteam.home4jars.view.prefrences
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.view.ViewGroup
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class EntertainmentPreferencesItemAdapter extends ItemAdapter<Holder> {
+final class PreferencesHeaderItem extends ItemAdapter<Holder> {
     @Override
     int getViewType() {
-        return R.layout.prefrences_transportation_row
+        return R.layout.preferences_header
     }
 
     @Override
@@ -25,7 +23,7 @@ final class EntertainmentPreferencesItemAdapter extends ItemAdapter<Holder> {
 
     }
 
-    final static class Holder extends RecyclerView.ViewHolder {
+    static class Holder extends RecyclerView.ViewHolder {
 
         Holder(View itemView) {
             super(itemView)

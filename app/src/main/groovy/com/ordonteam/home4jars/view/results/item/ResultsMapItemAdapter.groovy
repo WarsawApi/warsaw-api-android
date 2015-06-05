@@ -14,24 +14,22 @@ import groovy.transform.TupleConstructor
 
 @CompileStatic
 @TupleConstructor
-final class ResultsMapItemAdapter implements ItemAdapter {
+final class ResultsMapItemAdapter extends ItemAdapter<Holder> {
 
     SearchResults searchResults
 
     @Override
     int getViewType() {
-        return 2
+        return R.layout.results_map
     }
 
     @Override
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.results_map)
+    Holder onCreateViewHolder(View view) {
         return new Holder(view)
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
-        Holder holder = viewHolder as Holder
+    void onBindViewHolder(Holder holder) {
         Glide.with(holder.itemView.context).load(searchResults.mapUrl).into(holder.mapView)
     }
 

@@ -7,28 +7,34 @@ import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.TransportationPreferences
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.common.ItemGroup
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
+import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+
 @CompileStatic
 @TupleConstructor
-final class TransportationPreferencesItemAdapter implements ItemAdapter {
+final class TransportationPreferencesItemAdapter extends ItemAdapter<Holder> {
 
     TransportationPreferences transportationPreferences
     @Override
     int getViewType() {
-        return 12
+        return R.layout.prefrences_transportation_row
     }
 
     @Override
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.prefrences_transportation_row)
+    boolean match(ItemGroup itemGroup) {
+        return itemGroup == FIRST_ADDITIONAL_ROWS
+    }
+
+    @Override
+    Holder onCreateViewHolder(View view) {
         return new Holder(view)
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
-        Holder holder = viewHolder as Holder
+    void onBindViewHolder(Holder holder) {
         holder.subway.selected = transportationPreferences.subway
         holder.subway.onClickListener = this.&onSubwayClick
         holder.tramway.selected = transportationPreferences.tramway

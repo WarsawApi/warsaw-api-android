@@ -12,24 +12,22 @@ import groovy.transform.TupleConstructor
 
 @CompileStatic
 @TupleConstructor
-final class SecondRowPreferencesItemAdapter implements ItemAdapter {
+final class SecondRowPreferencesItemAdapter extends ItemAdapter<Holder> {
 
     PreferencesAdapter adapter
 
     @Override
     int getViewType() {
-        return 2
+        return R.layout.prefrences_second_row
     }
 
     @Override
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.prefrences_second_row)
+    Holder onCreateViewHolder(View view) {
         return new Holder(view)
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
-        Holder holder = viewHolder as Holder
+    void onBindViewHolder(Holder holder) {
         holder.entertainment.onClickListener = this.&onEntertainmentClick
     }
 

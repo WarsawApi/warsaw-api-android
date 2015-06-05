@@ -4,54 +4,48 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import com.ordonteam.home4jars.R
+import com.ordonteam.home4jars.dto.preferences.TransportationPreferences
+import com.ordonteam.home4jars.view.GlobalAdapter
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.common.ItemGroup
 import com.ordonteam.home4jars.view.prefrences.FirstRowController
 import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
+import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+
 @CompileStatic
 @TupleConstructor
-final class FirstRowPreferencesItemAdapter implements ItemAdapter {
+final class FirstRowPreferencesItemAdapter extends ItemAdapter<Holder> {
 
-    PreferencesAdapter preferencesAdapter
-    FirstRowController firstRowController
+    GlobalAdapter globalAdapter
 
     @Override
     int getViewType() {
-        return 1
+        return R.layout.prefrences_first_row
     }
 
     @Override
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.prefrences_first_row)
+    Holder onCreateViewHolder(View view) {
         return new Holder(view)
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
-        Holder holder = viewHolder as Holder
+    void onBindViewHolder(Holder holder) {
         holder.nearby.onClickListener = this.&onNearbyClick
         holder.transportation.onClickListener = this.&onTransportationClick
     }
 
     void onNearbyClick(View view) {
-        NearbyPreferencesItemAdapter itemAdapter = firstRowController.getNearbyItem()
-        if (preferencesAdapter.isShownInFirstAdditionalRow(itemAdapter)) {
-            preferencesAdapter.hideFirstAdditionalRow()
-        } else {
-            preferencesAdapter.showInFirstAdditionalRow(itemAdapter)
-        }
+        int position = globalAdapter.getItemPosition(this)
+        globalAdapter.replace(position + 1, FIRST_ADDITIONAL_ROWS, new NearbyPreferencesItemAdapter())
     }
 
     void onTransportationClick(View view) {
-        TransportationPreferencesItemAdapter itemAdapter = firstRowController.getTransportationItem()
-        if (preferencesAdapter.isShownInFirstAdditionalRow(itemAdapter)) {
-            preferencesAdapter.hideFirstAdditionalRow()
-        } else {
-            preferencesAdapter.showInFirstAdditionalRow(itemAdapter)
-        }
+        int position = globalAdapter.getItemPosition(this)
+        globalAdapter.replace(position + 1, FIRST_ADDITIONAL_ROWS, new TransportationPreferencesItemAdapter(new TransportationPreferences()))
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

@@ -17,24 +17,22 @@ import groovy.transform.TupleConstructor
 
 @CompileStatic
 @TupleConstructor
-final class ResultItemAdapter implements ItemAdapter {
+final class ResultItemAdapter extends ItemAdapter<Holder> {
 
     SearchResult searchResult
 
     @Override
     int getViewType() {
-        return 1
+        return R.layout.result_item
     }
 
     @Override
-    RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent) {
-        View view = InflateHelper.inflate(parent, R.layout.result_item)
+    Holder onCreateViewHolder(View view) {
         return new Holder(view)
     }
 
     @Override
-    void onBindViewHolder(RecyclerView.ViewHolder viewHolder) {
-        Holder holder = viewHolder as Holder
+    void onBindViewHolder(Holder holder) {
         Glide.with(holder.itemView.context).load(searchResult.imageUrl).placeholder(R.drawable.map_marker).into(holder.imageView)
         holder.addressView.text = searchResult.address
         holder.urlView.text = searchResult.url
@@ -42,7 +40,7 @@ final class ResultItemAdapter implements ItemAdapter {
         holder.itemView.onClickListener = this.&onClick
     }
 
-    void onClick(View view){
+    void onClick(View view) {
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(searchResult.url));
         view.context.startActivity(i);

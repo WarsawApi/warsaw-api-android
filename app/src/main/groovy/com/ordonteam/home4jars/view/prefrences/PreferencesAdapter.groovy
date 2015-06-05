@@ -13,7 +13,7 @@ final class PreferencesAdapter extends BaseRecyclerViewAdapter {
     boolean isSecondAdditionalRowVisible = false
 
     PreferencesAdapter(FirstRowController firstRowController) {
-        items.add(new FirstRowPreferencesItemAdapter(this, firstRowController))
+//        items.add(new FirstRowPreferencesItemAdapter(this, firstRowController))
         items.add(new SecondRowPreferencesItemAdapter(this))
     }
 
