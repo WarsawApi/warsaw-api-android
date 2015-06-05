@@ -53,9 +53,9 @@ final class ResultsController {
         title.backgroundResource = R.drawable.title_background
         title.onClickListener = this.&hideOnClick
 
-        subscription = new SearchService().call(new Preferences())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(this.&onSuccess, this.&onError)
+//        subscription = new SearchService().call(new Preferences())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(this.&onSuccess, this.&onError)
     }
 
     private void onSuccess(SearchResults searchResults) {

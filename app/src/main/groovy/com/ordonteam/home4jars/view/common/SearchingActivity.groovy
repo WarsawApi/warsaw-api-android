@@ -16,9 +16,9 @@ abstract class SearchingActivity extends LoaderActivity {
 
     void search(SearchParams params) {
         showLoader()
-        subscription = new SearchService().call(new Preferences())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(this.&onSuccessWrapper, this.&onError)
+//        subscription = new SearchService().call(new Preferences())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(this.&onSuccessWrapper, this.&onError)
     }
 
     void onSuccessWrapper(SearchResults searchResults){

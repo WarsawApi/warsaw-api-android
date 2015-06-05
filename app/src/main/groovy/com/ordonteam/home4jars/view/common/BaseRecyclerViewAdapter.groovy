@@ -35,12 +35,18 @@ public class BaseRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         return items.indexOf(itemAdapter)
     }
 
-    ItemAdapter getItem(int position) {
-        return items[position]
+    int getItemPosition(ItemGroup itemGroup) {
+        return items.indexOf(items.find { it.match(itemGroup) })
     }
 
     void addBelow(ItemAdapter itemAdapter, ItemAdapter itemToAdd) {
         int position = getItemPosition(itemAdapter) + 1
+        items.add(position, itemToAdd)
+        notifyItemInserted(position)
+    }
+
+    void addBelow(ItemGroup itemGroup, ItemAdapter itemToAdd) {
+        int position = getItemPosition(itemGroup) + 1
         items.add(position, itemToAdd)
         notifyItemInserted(position)
     }

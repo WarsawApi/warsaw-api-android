@@ -10,8 +10,11 @@ import com.bumptech.glide.Glide
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResult
 import com.ordonteam.home4jars.view.common.ItemAdapter
+import com.ordonteam.home4jars.view.common.ItemGroup
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
+
+import static com.ordonteam.home4jars.view.common.ItemGroup.RESULT
 
 @CompileStatic
 @TupleConstructor
@@ -27,6 +30,11 @@ final class ResultItemAdapter extends ItemAdapter<Holder> {
     @Override
     Holder onCreateViewHolder(View view) {
         return new Holder(view)
+    }
+
+    @Override
+    boolean match(ItemGroup itemGroup) {
+        return itemGroup == RESULT
     }
 
     @Override

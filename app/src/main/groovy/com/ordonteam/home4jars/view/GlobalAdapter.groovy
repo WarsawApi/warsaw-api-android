@@ -1,5 +1,6 @@
 package com.ordonteam.home4jars.view
 
+import com.ordonteam.home4jars.dto.filters.Filters
 import com.ordonteam.home4jars.dto.preferences.Preferences
 import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
 import com.ordonteam.home4jars.view.common.ItemAdapter
@@ -10,13 +11,17 @@ import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesIte
 import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
 import com.ordonteam.home4jars.view.results.item.ResultsHeaderItem
 import groovy.transform.CompileStatic
+import groovy.transform.TupleConstructor
 
 @CompileStatic
+@TupleConstructor
 final class GlobalAdapter extends BaseRecyclerViewAdapter {
 
-    final Preferences preferences = new Preferences()
+    Preferences preferences
+    Filters filters
 
-    GlobalAdapter() {
+    GlobalAdapter(Preferences preferences) {
+        this.preferences = preferences
         items.add(new PreferencesHeaderItem(this))
         items.add(new FirstRowPreferencesItemAdapter(this))
         items.add(new SecondRowPreferencesItemAdapter(this))
@@ -40,6 +45,7 @@ final class GlobalAdapter extends BaseRecyclerViewAdapter {
             if (items[index].match(itemGroup)) {
                 items.remove(index)
                 notifyItemRemoved(index)
+                index--
             }
         }
     }
