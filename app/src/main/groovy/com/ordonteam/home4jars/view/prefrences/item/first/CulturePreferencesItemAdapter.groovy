@@ -4,8 +4,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.CulturePreferences
+import com.ordonteam.home4jars.view.common.DataChangedEvent
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
+import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
@@ -45,16 +47,19 @@ final class CulturePreferencesItemAdapter extends ItemAdapter<Holder> {
     void onCinemasClick(View view){
         view.selected = !view.selected
         culturePreferences.cinemas = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     void onTheatresClick(View view){
         view.selected = !view.selected
         culturePreferences.theatre = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     void onExhibitionsClick(View view){
         view.selected = !view.selected
         culturePreferences.exhibitions = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

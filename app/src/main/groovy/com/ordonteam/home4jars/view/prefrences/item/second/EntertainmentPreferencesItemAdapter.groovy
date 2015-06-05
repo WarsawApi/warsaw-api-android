@@ -4,8 +4,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.EntertainmentPreferences
+import com.ordonteam.home4jars.view.common.DataChangedEvent
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
+import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
@@ -45,16 +47,19 @@ final class EntertainmentPreferencesItemAdapter extends ItemAdapter<Holder> {
     void onClubsClick(View view){
         view.selected = !view.selected
         entertainmentPreferences.clubs = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     void onPubsClick(View view){
         view.selected = !view.selected
         entertainmentPreferences.pubs = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     void onRestaurantsClick(View view){
         view.selected = !view.selected
         entertainmentPreferences.restaurants = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

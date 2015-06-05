@@ -4,8 +4,10 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.TransportationPreferences
+import com.ordonteam.home4jars.view.common.DataChangedEvent
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
+import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
@@ -45,16 +47,19 @@ final class TransportationPreferencesItemAdapter extends ItemAdapter<Holder> {
     void onSubwayClick(View view){
         view.selected = !view.selected
         transportationPreferences.subway = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     void onTramwayClick(View view){
         view.selected = !view.selected
         transportationPreferences.tramway = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     void onOnFootClick(View view){
         view.selected = !view.selected
         transportationPreferences.onFoot = view.selected
+        EventBus.default.post(new DataChangedEvent())
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
