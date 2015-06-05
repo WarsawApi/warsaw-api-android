@@ -7,7 +7,7 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
-        android:id="@+id/clubs"
+        android:id="@+id/entertainment_clubs"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
@@ -16,7 +16,7 @@
         android:src="@drawable/entertainment_clubs" />
 
     <ImageView
-        android:id="@+id/pubs"
+        android:id="@+id/entertainment_pubs"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
@@ -25,7 +25,7 @@
         android:src="@drawable/entertainment_pubs" />
 
     <ImageView
-        android:id="@+id/restaurants"
+        android:id="@+id/entertainment_restaurants"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
