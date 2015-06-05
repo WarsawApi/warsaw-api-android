@@ -9,6 +9,7 @@ import com.ordonteam.home4jars.view.GlobalAdapter
 import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.common.SectionItemAdapter
 import com.ordonteam.home4jars.view.prefrences.FirstRowController
 import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
 import groovy.transform.CompileStatic
@@ -18,9 +19,9 @@ import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROW
 
 @CompileStatic
 @TupleConstructor
-final class FirstRowPreferencesItemAdapter extends ItemAdapter<Holder> {
+final class FirstRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
 
-    GlobalAdapter globalAdapter
+    final ItemGroup itemGroup = FIRST_ADDITIONAL_ROWS
 
     @Override
     int getViewType() {
@@ -39,13 +40,11 @@ final class FirstRowPreferencesItemAdapter extends ItemAdapter<Holder> {
     }
 
     void onNearbyClick(View view) {
-        int position = globalAdapter.getItemPosition(this)
-        globalAdapter.replace(position + 1, FIRST_ADDITIONAL_ROWS, new NearbyPreferencesItemAdapter())
+        replace(new NearbyPreferencesItemAdapter())
     }
 
     void onTransportationClick(View view) {
-        int position = globalAdapter.getItemPosition(this)
-        globalAdapter.replace(position + 1, FIRST_ADDITIONAL_ROWS, new TransportationPreferencesItemAdapter(new TransportationPreferences()))
+        replace(new TransportationPreferencesItemAdapter(new TransportationPreferences()))
     }
 
     final static class Holder extends RecyclerView.ViewHolder {
