@@ -10,6 +10,7 @@ import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
 import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+import static com.ordonteam.home4jars.view.common.ItemGroup.SECOND_ADDITIONAL_ROWS
 
 @CompileStatic
 @TupleConstructor(includeSuperProperties = true)
@@ -35,14 +36,17 @@ final class FirstRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
     }
 
     void onNearbyClick(View view) {
+        globalAdapter.removeGroup(SECOND_ADDITIONAL_ROWS)
         replace(new NearbyPreferencesItemAdapter())
     }
 
     void onTransportationClick(View view) {
+        globalAdapter.removeGroup(SECOND_ADDITIONAL_ROWS)
         replace(new TransportationPreferencesItemAdapter(new TransportationPreferences()))
     }
 
     void onCultureClick(View view) {
+        globalAdapter.removeGroup(SECOND_ADDITIONAL_ROWS)
         replace(new CulturePreferencesItemAdapter())
     }
 

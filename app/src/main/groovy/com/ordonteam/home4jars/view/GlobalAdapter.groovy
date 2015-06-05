@@ -38,7 +38,7 @@ final class GlobalAdapter extends BaseRecyclerViewAdapter {
         notifyItemInserted(position)
     }
 
-    private void removeGroup(ItemGroup itemGroup) {
+    void removeGroup(ItemGroup itemGroup) {
         for (int index = 0; index < itemCount; index++) {
             if (items[index].match(itemGroup)) {
                 items.remove(index)

@@ -8,6 +8,8 @@ import com.ordonteam.home4jars.view.common.SectionItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
+import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+
 @CompileStatic
 @TupleConstructor(includeSuperProperties = true)
 final class SecondRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
@@ -32,14 +34,17 @@ final class SecondRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
     }
 
     void onEntertainmentClick(View view) {
+        globalAdapter.removeGroup(FIRST_ADDITIONAL_ROWS)
         replace(new EntertainmentPreferencesItemAdapter())
     }
 
     void onSportClick(View view) {
+        globalAdapter.removeGroup(FIRST_ADDITIONAL_ROWS)
         replace(new SportPreferencesItemAdapter())
     }
 
     void onRecreationClick(View view) {
+        globalAdapter.removeGroup(FIRST_ADDITIONAL_ROWS)
         replace(new RecreationPreferencesItemAdapter())
     }
 
