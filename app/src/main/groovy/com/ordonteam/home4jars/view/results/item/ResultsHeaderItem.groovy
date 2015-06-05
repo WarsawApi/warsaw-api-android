@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.filters.item
+package com.ordonteam.home4jars.view.results.item
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
@@ -10,13 +10,13 @@ import groovy.transform.TupleConstructor
 
 @CompileStatic
 @TupleConstructor
-final class FiltersHeaderItem extends ItemAdapter<Holder> {
+final class ResultsHeaderItem extends ItemAdapter<Holder> {
 
     GlobalAdapter globalAdapter
 
     @Override
     int getViewType() {
-        return R.layout.filters_header
+        return R.layout.results_header
     }
 
     @Override
@@ -26,7 +26,11 @@ final class FiltersHeaderItem extends ItemAdapter<Holder> {
 
     @Override
     void onBindViewHolder(Holder holder) {
+        holder.itemView.onClickListener = this.&onHeaderClick
+    }
 
+    void onHeaderClick(View view) {
+        view.selected = !view.selected
     }
 
     static class Holder extends RecyclerView.ViewHolder {

@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.prefrences
+package com.ordonteam.home4jars.view.prefrences.item
 
 import android.support.v7.widget.RecyclerView
 import android.view.View

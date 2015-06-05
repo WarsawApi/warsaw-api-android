@@ -3,8 +3,6 @@ package com.ordonteam.home4jars.view.common;
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.ordonteam.home4jars.view.prefrences.PreferencesHeaderItem
-import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic

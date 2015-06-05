@@ -10,11 +10,6 @@ import groovy.transform.CompileStatic
 @CompileStatic
 final class Home4Jars extends Activity {
 
-
-//    PreferenceController preferenceController = new PreferenceController()
-//    FiltersController filtersController = new FiltersController()
-//    ResultsController resultsController = new ResultsController()
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState)
@@ -23,21 +18,6 @@ final class Home4Jars extends Activity {
         RecyclerView globalRecyclerView = (RecyclerView) findViewById(R.id.global_recycler_view)
         globalRecyclerView.layoutManager = new LinearLayoutManager(this)
         globalRecyclerView.adapter = new GlobalAdapter()
-
-//        preferenceController.init(this)
-//        filtersController.init(this,new Filters())
-//        resultsController.init(this)
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume()
-//        preferenceController.onResume()
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause()
-//        preferenceController.onPause()
-    }
 }
