@@ -7,29 +7,31 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
-        android:id="@+id/preferences_entertainment"
+        android:id="@+id/recreation_reservoirs"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/entertainment" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/recreation_reservoirs" />
 
     <ImageView
-        android:id="@+id/preferences_sport"
+        android:id="@+id/recreation_parks"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/sport" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/recreation_parks" />
 
     <ImageView
-        android:id="@+id/preferences_recreation"
+        android:id="@+id/recreation_bikes"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/recreation" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/recreation_bikes" />
 </LinearLayout>
+
+        

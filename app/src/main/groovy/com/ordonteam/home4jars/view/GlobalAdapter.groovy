@@ -4,6 +4,7 @@ import com.ordonteam.home4jars.dto.preferences.Preferences
 import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.filters.item.FiltersHeaderItem
 import com.ordonteam.home4jars.view.prefrences.PreferencesHeaderItem
 import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesItemAdapter
 import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
@@ -18,7 +19,7 @@ final class GlobalAdapter extends BaseRecyclerViewAdapter {
         items.add(new PreferencesHeaderItem())
         items.add(new FirstRowPreferencesItemAdapter(this))
         items.add(new SecondRowPreferencesItemAdapter(this))
-        items.add(new PreferencesHeaderItem())
+        items.add(new FiltersHeaderItem())
     }
 
     void addItem(int position, ItemAdapter itemAdapter) {

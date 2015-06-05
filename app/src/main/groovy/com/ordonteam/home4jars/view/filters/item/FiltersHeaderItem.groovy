@@ -7,7 +7,7 @@ import com.ordonteam.home4jars.view.common.ItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class PreferencesHeaderItem extends ItemAdapter<Holder> {
+final class FiltersHeaderItem extends ItemAdapter<Holder> {
     @Override
     int getViewType() {
         return R.layout.filters_header
