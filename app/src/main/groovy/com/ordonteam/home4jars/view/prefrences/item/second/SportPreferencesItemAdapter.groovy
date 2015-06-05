@@ -7,13 +7,15 @@ import com.ordonteam.home4jars.dto.preferences.SportPreferences
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
 import groovy.transform.CompileStatic
+import groovy.transform.TupleConstructor
 
 import static com.ordonteam.home4jars.view.common.ItemGroup.SECOND_ADDITIONAL_ROWS
 
 @CompileStatic
+@TupleConstructor
 final class SportPreferencesItemAdapter extends ItemAdapter<Holder> {
 
-    SportPreferences sportPreferences = new SportPreferences()
+    SportPreferences sportPreferences
 
     @Override
     int getViewType() {

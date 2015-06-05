@@ -15,7 +15,7 @@ import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROW
 @TupleConstructor
 final class CulturePreferencesItemAdapter extends ItemAdapter<Holder> {
 
-    CulturePreferences culturePreferences = new CulturePreferences()
+    CulturePreferences culturePreferences
 
     @Override
     int getViewType() {

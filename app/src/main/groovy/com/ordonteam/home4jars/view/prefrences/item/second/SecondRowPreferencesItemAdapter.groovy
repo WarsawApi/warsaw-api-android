@@ -41,17 +41,17 @@ final class SecondRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
 
     void onEntertainmentClick(View view) {
         globalAdapter.removeGroup(FIRST_ADDITIONAL_ROWS)
-        replace(new EntertainmentPreferencesItemAdapter())
+        replace(new EntertainmentPreferencesItemAdapter(globalAdapter.preferences.entertainmentPreferences))
     }
 
     void onSportClick(View view) {
         globalAdapter.removeGroup(FIRST_ADDITIONAL_ROWS)
-        replace(new SportPreferencesItemAdapter())
+        replace(new SportPreferencesItemAdapter(globalAdapter.preferences.sportPreferences))
     }
 
     void onRecreationClick(View view) {
         globalAdapter.removeGroup(FIRST_ADDITIONAL_ROWS)
-        replace(new RecreationPreferencesItemAdapter())
+        replace(new RecreationPreferencesItemAdapter(globalAdapter.preferences.recreationPreferences))
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

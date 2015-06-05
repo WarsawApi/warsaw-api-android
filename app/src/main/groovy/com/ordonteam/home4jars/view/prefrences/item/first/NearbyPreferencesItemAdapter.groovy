@@ -16,6 +16,7 @@ import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROW
 final class NearbyPreferencesItemAdapter extends ItemAdapter<Holder> {
 
     NearbyPreferences nearbyPreferences
+
     @Override
     int getViewType() {
         return R.layout.prefrences_nearby_row

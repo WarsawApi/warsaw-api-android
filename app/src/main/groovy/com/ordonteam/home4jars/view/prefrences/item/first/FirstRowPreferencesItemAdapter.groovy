@@ -43,17 +43,17 @@ final class FirstRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
 
     void onNearbyClick(View view) {
         globalAdapter.removeGroup(SECOND_ADDITIONAL_ROWS)
-        replace(new NearbyPreferencesItemAdapter())
+        replace(new NearbyPreferencesItemAdapter(globalAdapter.preferences.nearbyPreferences))
     }
 
     void onTransportationClick(View view) {
         globalAdapter.removeGroup(SECOND_ADDITIONAL_ROWS)
-        replace(new TransportationPreferencesItemAdapter(new TransportationPreferences()))
+        replace(new TransportationPreferencesItemAdapter(globalAdapter.preferences.transportationPreferences))
     }
 
     void onCultureClick(View view) {
         globalAdapter.removeGroup(SECOND_ADDITIONAL_ROWS)
-        replace(new CulturePreferencesItemAdapter())
+        replace(new CulturePreferencesItemAdapter(globalAdapter.preferences.culturePreferences))
     }
 
     final static class Holder extends RecyclerView.ViewHolder {

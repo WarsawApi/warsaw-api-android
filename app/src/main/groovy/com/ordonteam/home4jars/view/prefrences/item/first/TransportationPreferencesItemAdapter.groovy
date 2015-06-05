@@ -16,6 +16,7 @@ import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROW
 final class TransportationPreferencesItemAdapter extends ItemAdapter<Holder> {
 
     TransportationPreferences transportationPreferences
+
     @Override
     int getViewType() {
         return R.layout.prefrences_transportation_row
