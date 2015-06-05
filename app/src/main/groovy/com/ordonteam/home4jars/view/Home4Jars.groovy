@@ -5,11 +5,6 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.filters.Filters
-import com.ordonteam.home4jars.dto.preferences.Preferences
-import com.ordonteam.home4jars.view.filters.FiltersController
-import com.ordonteam.home4jars.view.prefrences.PreferenceController
-import com.ordonteam.home4jars.view.results.ResultsController
 import groovy.transform.CompileStatic
 
 @CompileStatic

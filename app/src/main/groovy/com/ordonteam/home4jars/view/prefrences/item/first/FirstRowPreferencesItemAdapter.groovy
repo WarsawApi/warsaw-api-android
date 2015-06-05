@@ -2,16 +2,10 @@ package com.ordonteam.home4jars.view.prefrences.item.first
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.view.ViewGroup
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.TransportationPreferences
-import com.ordonteam.home4jars.view.GlobalAdapter
-import com.ordonteam.home4jars.view.common.InflateHelper
-import com.ordonteam.home4jars.view.common.ItemAdapter
 import com.ordonteam.home4jars.view.common.ItemGroup
 import com.ordonteam.home4jars.view.common.SectionItemAdapter
-import com.ordonteam.home4jars.view.prefrences.FirstRowController
-import com.ordonteam.home4jars.view.prefrences.PreferencesAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 

@@ -2,12 +2,10 @@ package com.ordonteam.home4jars.view.results.item
 
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.SearchResults
-import com.ordonteam.home4jars.view.common.InflateHelper
 import com.ordonteam.home4jars.view.common.ItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
