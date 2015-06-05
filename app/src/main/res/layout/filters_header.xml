@@ -7,6 +7,5 @@
     android:layout_height="wrap_content"
     android:background="@drawable/title_background"
     android:padding="@dimen/margin_large"
-    android:text="@string/preference_title"
-    android:textColor="@color/title_text"
-    tools:showIn="@layout/home_4_jars_activity" />
+    android:text="@string/filters_title"
+    android:textColor="@color/title_text" />

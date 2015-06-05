@@ -10,7 +10,7 @@ import groovy.transform.CompileStatic
 final class PreferencesHeaderItem extends ItemAdapter<Holder> {
     @Override
     int getViewType() {
-        return R.layout.preferences_header
+        return R.layout.prefrences_header
     }
 
     @Override

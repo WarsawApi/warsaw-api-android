@@ -4,7 +4,7 @@
     tools:showIn="@layout/home_4_jars_activity">
 
 
-    <include layout="@layout/preferences_header" />
+    <include layout="@layout/prefrences_header" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/preferences_recycler"

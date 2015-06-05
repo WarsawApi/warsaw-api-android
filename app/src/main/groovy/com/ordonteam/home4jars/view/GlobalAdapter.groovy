@@ -18,6 +18,7 @@ final class GlobalAdapter extends BaseRecyclerViewAdapter {
         items.add(new PreferencesHeaderItem())
         items.add(new FirstRowPreferencesItemAdapter(this))
         items.add(new SecondRowPreferencesItemAdapter(this))
+        items.add(new PreferencesHeaderItem())
     }
 
     void addItem(int position, ItemAdapter itemAdapter) {

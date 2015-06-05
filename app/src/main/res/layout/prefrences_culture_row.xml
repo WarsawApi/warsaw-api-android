@@ -7,31 +7,31 @@
     tools:showIn="@layout/preferences">
 
     <ImageView
-        android:id="@+id/nearby"
+        android:id="@+id/culture_cinemas"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/nearby" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/culture_cinemas" />
 
     <ImageView
-        android:id="@+id/transportation"
+        android:id="@+id/culture_theatres"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/transportation" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/culture_theatres" />
 
     <ImageView
-        android:id="@+id/culture"
+        android:id="@+id/culture_exhibitions"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/icons_margin"
         android:layout_weight="1"
-        android:background="@color/main_icons_background"
-        android:src="@drawable/culture" />
+        android:background="@drawable/selectable"
+        android:src="@drawable/culture_exhibitions" />
 </LinearLayout>
 
         

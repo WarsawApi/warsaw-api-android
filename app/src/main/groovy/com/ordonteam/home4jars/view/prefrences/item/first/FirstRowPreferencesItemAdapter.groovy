@@ -31,6 +31,7 @@ final class FirstRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
     void onBindViewHolder(Holder holder) {
         holder.nearby.onClickListener = this.&onNearbyClick
         holder.transportation.onClickListener = this.&onTransportationClick
+        holder.culture.onClickListener = this.&onCultureClick
     }
 
     void onNearbyClick(View view) {
@@ -41,15 +42,21 @@ final class FirstRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
         replace(new TransportationPreferencesItemAdapter(new TransportationPreferences()))
     }
 
+    void onCultureClick(View view) {
+        replace(new CulturePreferencesItemAdapter())
+    }
+
     final static class Holder extends RecyclerView.ViewHolder {
 
         View nearby
         View transportation
+        View culture
 
         Holder(View itemView) {
             super(itemView)
             nearby = itemView.findViewById(R.id.nearby)
-            transportation = itemView.findViewById(R.id.preferences_transportation)
+            transportation = itemView.findViewById(R.id.transportation)
+            culture = itemView.findViewById(R.id.culture)
         }
     }
 }
