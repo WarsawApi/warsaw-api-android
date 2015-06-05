@@ -3,6 +3,8 @@ package com.ordonteam.home4jars.view.common;
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import com.ordonteam.home4jars.view.prefrences.PreferencesHeaderItem
+import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
 import groovy.transform.CompileStatic
 
 @CompileStatic
@@ -37,5 +39,11 @@ public class BaseRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     ItemAdapter getItem(int position) {
         return items[position]
+    }
+
+    void addBelow(ItemAdapter itemAdapter, ItemAdapter itemToAdd) {
+        int position = getItemPosition(itemAdapter) + 1
+        items.add(position, itemToAdd)
+        notifyItemInserted(position)
     }
 }

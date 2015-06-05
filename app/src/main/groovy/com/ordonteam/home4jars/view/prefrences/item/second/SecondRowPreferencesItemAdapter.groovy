@@ -9,6 +9,7 @@ import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
 import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+import static com.ordonteam.home4jars.view.common.ItemGroup.SECOND_ROW
 
 @CompileStatic
 @TupleConstructor(includeSuperProperties = true)
@@ -24,6 +25,11 @@ final class SecondRowPreferencesItemAdapter extends SectionItemAdapter<Holder> {
     @Override
     Holder onCreateViewHolder(View view) {
         return new Holder(view)
+    }
+
+    @Override
+    boolean match(ItemGroup itemGroup) {
+        return itemGroup == SECOND_ROW
     }
 
     @Override
