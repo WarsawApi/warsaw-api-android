@@ -3,8 +3,8 @@ package com.ordonteam.home4jars.view
 import com.ordonteam.home4jars.dto.filters.Filters
 import com.ordonteam.home4jars.dto.preferences.Preferences
 import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
-import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.common.item.ItemAdapter
+import com.ordonteam.home4jars.view.common.item.ItemGroup
 import com.ordonteam.home4jars.view.filters.item.FiltersHeaderItem
 import com.ordonteam.home4jars.view.prefrences.item.PreferencesHeaderItem
 import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesItemAdapter

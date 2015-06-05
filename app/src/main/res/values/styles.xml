@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="AppTheme" parent="android:Theme.Light">
         <item name="android:windowBackground">@color/app_color</item>
         <item name="android:colorBackground">@color/app_color</item>
+    </style>
+
+    <style name="SectionHeader">
+        <item name="android:background">@color/title_background</item>
+        <item name="android:padding">@dimen/margin_large</item>
+        <item name="android:textColor">@color/title_text</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

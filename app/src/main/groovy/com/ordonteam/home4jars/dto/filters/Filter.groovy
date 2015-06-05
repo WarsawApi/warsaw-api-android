@@ -3,8 +3,7 @@ package com.ordonteam.home4jars.dto.filters
 import groovy.transform.CompileStatic
 
 @CompileStatic
-final class Filters {
-    Filter price
-    Filter measurement
-    Filter rooms
+final class Filter {
+    String min
+    String max
 }

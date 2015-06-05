@@ -3,8 +3,8 @@ package com.ordonteam.home4jars.view
 import android.util.Log
 import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.service.SearchService
-import com.ordonteam.home4jars.view.common.DataChangedEvent
-import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.common.event.DataChangedEvent
+import com.ordonteam.home4jars.view.common.item.ItemGroup
 import com.ordonteam.home4jars.view.results.item.ResultItemAdapter
 import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic

@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.common
+package com.ordonteam.home4jars.view.common.event
 
 import groovy.transform.CompileStatic
 

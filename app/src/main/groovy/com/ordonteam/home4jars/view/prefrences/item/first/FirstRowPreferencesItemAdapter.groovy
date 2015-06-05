@@ -3,15 +3,14 @@ package com.ordonteam.home4jars.view.prefrences.item.first
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
-import com.ordonteam.home4jars.dto.preferences.TransportationPreferences
-import com.ordonteam.home4jars.view.common.ItemGroup
-import com.ordonteam.home4jars.view.common.SectionItemAdapter
+import com.ordonteam.home4jars.view.common.item.ItemGroup
+import com.ordonteam.home4jars.view.common.item.SectionItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
-import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
-import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ROW
-import static com.ordonteam.home4jars.view.common.ItemGroup.SECOND_ADDITIONAL_ROWS
+import static ItemGroup.FIRST_ADDITIONAL_ROWS
+import static ItemGroup.FIRST_ROW
+import static ItemGroup.SECOND_ADDITIONAL_ROWS
 
 @CompileStatic
 @TupleConstructor(includeSuperProperties = true)

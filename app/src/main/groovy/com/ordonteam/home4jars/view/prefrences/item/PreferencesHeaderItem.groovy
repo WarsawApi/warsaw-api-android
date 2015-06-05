@@ -4,8 +4,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.view.GlobalAdapter
-import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.common.item.ItemAdapter
+import com.ordonteam.home4jars.view.common.item.ItemGroup
 import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesItemAdapter
 import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
 import groovy.transform.CompileStatic

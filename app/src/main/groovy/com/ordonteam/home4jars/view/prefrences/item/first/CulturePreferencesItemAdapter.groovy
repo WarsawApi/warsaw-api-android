@@ -4,14 +4,14 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.dto.preferences.CulturePreferences
-import com.ordonteam.home4jars.view.common.DataChangedEvent
-import com.ordonteam.home4jars.view.common.ItemAdapter
-import com.ordonteam.home4jars.view.common.ItemGroup
+import com.ordonteam.home4jars.view.common.event.DataChangedEvent
+import com.ordonteam.home4jars.view.common.item.ItemAdapter
+import com.ordonteam.home4jars.view.common.item.ItemGroup
 import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
-import static com.ordonteam.home4jars.view.common.ItemGroup.FIRST_ADDITIONAL_ROWS
+import static ItemGroup.FIRST_ADDITIONAL_ROWS
 
 @CompileStatic
 @TupleConstructor

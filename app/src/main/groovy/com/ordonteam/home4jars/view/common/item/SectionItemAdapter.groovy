@@ -1,4 +1,4 @@
-package com.ordonteam.home4jars.view.common
+package com.ordonteam.home4jars.view.common.item
 
 import android.support.v7.widget.RecyclerView
 import com.ordonteam.home4jars.view.GlobalAdapter
