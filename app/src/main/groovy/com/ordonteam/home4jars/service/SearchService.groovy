@@ -27,7 +27,10 @@ class SearchService {
     }
 
     rx.Observable<SearchResults> call(Preferences preferences, Filters filters) {
-        return searchApi.call(preferences, filters).doOnNext(this.&take5)
+        String jsonPreferences = new Gson().toJson(preferences)
+        String jsonFilters = new Gson().toJson(filters)
+        Map<String, String> map = [preferences: jsonPreferences, filters: jsonFilters]
+        return searchApi.call(map).doOnNext(this.&take5)
     }
 
     void take5(SearchResults searchResults){

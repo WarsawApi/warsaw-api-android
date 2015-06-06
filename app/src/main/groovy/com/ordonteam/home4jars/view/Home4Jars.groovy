@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import com.ordonteam.home4jars.R
+import com.ordonteam.home4jars.dto.filters.Filters
 import com.ordonteam.home4jars.dto.preferences.Preferences
 import groovy.transform.CompileStatic
 
 @CompileStatic
 final class Home4Jars extends Activity {
     final Preferences preferences = new Preferences()
+    final Filters filters = new Filters()
     GlobalController controller
     GlobalAdapter globalAdapter
 
@@ -21,7 +23,7 @@ final class Home4Jars extends Activity {
 
         RecyclerView globalRecyclerView = (RecyclerView) findViewById(R.id.global_recycler_view)
         globalRecyclerView.layoutManager = new LinearLayoutManager(this)
-        globalAdapter = new GlobalAdapter(preferences)
+        globalAdapter = new GlobalAdapter(preferences, filters)
         globalRecyclerView.adapter = globalAdapter
 
         controller = new GlobalController(globalAdapter)

@@ -20,8 +20,9 @@ final class GlobalAdapter extends BaseRecyclerViewAdapter {
     Preferences preferences
     Filters filters
 
-    GlobalAdapter(Preferences preferences) {
+    GlobalAdapter(Preferences preferences, Filters filters) {
         this.preferences = preferences
+        this.filters = filters
         items.add(new PreferencesHeaderItem(this))
         items.add(new FirstRowPreferencesItemAdapter(this))
         items.add(new SecondRowPreferencesItemAdapter(this))
