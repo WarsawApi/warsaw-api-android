@@ -30,10 +30,7 @@ class SearchService {
         String jsonPreferences = new Gson().toJson(preferences)
         String jsonFilters = new Gson().toJson(filters)
         Map<String, String> map = [preferences: jsonPreferences, filters: jsonFilters]
-        return searchApi.call(map).doOnNext(this.&take5)
+        return searchApi.call(map)
     }
 
-    void take5(SearchResults searchResults){
-        searchResults.items = searchResults.items.take(5)
-    }
 }
