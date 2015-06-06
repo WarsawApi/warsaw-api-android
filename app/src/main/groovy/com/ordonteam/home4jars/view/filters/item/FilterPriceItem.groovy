@@ -5,6 +5,9 @@ import android.view.View
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.view.GlobalAdapter
 import com.ordonteam.home4jars.view.common.item.ItemAdapter
+import com.ordonteam.home4jars.view.common.item.ItemGroup
+import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesItemAdapter
+import com.ordonteam.home4jars.view.prefrences.item.second.SecondRowPreferencesItemAdapter
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
@@ -12,13 +15,13 @@ import static com.ordonteam.home4jars.view.common.item.ItemGroup.FILTER
 
 @CompileStatic
 @TupleConstructor
-final class FiltersHeaderItem extends ItemAdapter<Holder> {
+final class FilterPriceItem extends ItemAdapter<Holder> {
 
     GlobalAdapter globalAdapter
 
     @Override
     int getViewType() {
-        return R.layout.filters_header
+        return R.layout.filter_item
     }
 
     @Override
@@ -27,20 +30,13 @@ final class FiltersHeaderItem extends ItemAdapter<Holder> {
     }
 
     @Override
-    void onBindViewHolder(Holder holder) {
-        holder.itemView.selected = true
-        holder.itemView.onClickListener = this.&onHeaderClick
+    boolean match(ItemGroup itemGroup) {
+        itemGroup == FILTER
     }
 
-    void onHeaderClick(View view) {
-        view.selected = !view.selected
-        if (view.selected) {
-            globalAdapter.addBelow(this, new FilterPriceItem(globalAdapter))
-            globalAdapter.addBelow(this, new FilterPriceItem(globalAdapter))
-            globalAdapter.addBelow(this, new FilterPriceItem(globalAdapter))
-        } else {
-            globalAdapter.removeGroup(FILTER)
-        }
+    @Override
+    void onBindViewHolder(Holder holder) {
+
     }
 
     static class Holder extends RecyclerView.ViewHolder {
