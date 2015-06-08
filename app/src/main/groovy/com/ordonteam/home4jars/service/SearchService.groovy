@@ -3,6 +3,7 @@ package com.ordonteam.home4jars.service
 import com.google.gson.Gson
 import com.ordonteam.home4jars.BuildConfig
 import com.ordonteam.home4jars.api.SearchApi
+import com.ordonteam.home4jars.dto.SearchRequest
 import com.ordonteam.home4jars.dto.SearchResults
 import com.ordonteam.home4jars.dto.filters.Filters
 import com.ordonteam.home4jars.dto.preferences.Preferences
@@ -27,10 +28,7 @@ class SearchService {
     }
 
     rx.Observable<SearchResults> call(Preferences preferences, Filters filters) {
-        String jsonPreferences = new Gson().toJson(preferences)
-        String jsonFilters = new Gson().toJson(filters)
-        Map<String, String> map = [preferences: jsonPreferences, filters: jsonFilters]
-        return searchApi.call(map)
+        return searchApi.call(new SearchRequest(preferences: preferences,filters:filters))
     }
 
 }
