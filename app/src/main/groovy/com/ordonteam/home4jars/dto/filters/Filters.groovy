@@ -4,7 +4,7 @@ import groovy.transform.CompileStatic
 
 @CompileStatic
 final class Filters {
-    Filter price
-    Filter measurement
-    Filter rooms
+    Filter price = new Filter()
+    Filter measurement = new Filter()
+    Filter rooms = new Filter()
 }
