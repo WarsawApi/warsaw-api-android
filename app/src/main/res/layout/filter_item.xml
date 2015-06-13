@@ -38,6 +38,6 @@
         android:id="@+id/range"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tickCount="10" />
+        app:tickCount="11" />
 
 </LinearLayout>

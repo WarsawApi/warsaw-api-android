@@ -1,14 +1,15 @@
 package com.ordonteam.home4jars.view.filters.item
 
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.edmodo.rangebar.RangeBar
 import com.ordonteam.home4jars.R
 import com.ordonteam.home4jars.view.GlobalAdapter
+import com.ordonteam.home4jars.view.common.event.DataChangedEvent
 import com.ordonteam.home4jars.view.common.item.ItemAdapter
 import com.ordonteam.home4jars.view.common.item.ItemGroup
+import de.greenrobot.event.EventBus
 import groovy.transform.CompileStatic
 import groovy.transform.TupleConstructor
 
@@ -17,6 +18,10 @@ import static com.ordonteam.home4jars.view.common.item.ItemGroup.FILTER
 @CompileStatic
 @TupleConstructor
 final class FilterPriceItem extends ItemAdapter<Holder> {
+
+    private static final int tickCount = 11
+    private static final int pricePerTick = 350
+    private static final int maxPrice = 3500
 
     GlobalAdapter globalAdapter
 
@@ -37,27 +42,37 @@ final class FilterPriceItem extends ItemAdapter<Holder> {
 
     @Override
     void onBindViewHolder(Holder holder) {
+        holder.range.tickCount = tickCount
         holder.range.onRangeBarChangeListener = this.&onIndexChangeListener.rcurry(holder)
+        int left = priceToInt(globalAdapter.filters.price.min, 0)
+        int right = priceToInt(globalAdapter.filters.price.max, tickCount-1)
+        holder.range.setThumbIndices(left, right)
     }
 
-    void onIndexChangeListener(RangeBar rangeBar, int min, int max, Holder holder) {
-        Log.e('aaaaa', "min=$min max=$max")
-        if (min == 0) {
-            globalAdapter.filters.price.min = null
-            holder.fromText.text = 'From: 0'
-        } else {
-            String from = (min * 350).toString()
-            globalAdapter.filters.price.min = from
-            holder.fromText.text = 'From: '+from
+    private int priceToInt(String min, int aDefault) {
+        if(min){
+            return (int) (min.toInteger() / pricePerTick)
+        }else {
+            aDefault
         }
-        if (max == 9) {
-            globalAdapter.filters.price.max = null
-            holder.toText.text = 'To: 3500+'
-        } else {
-            int to = max * 350
-            globalAdapter.filters.price.max = to.toString()
-            holder.toText.text = 'To: ' + to
-        }
+    }
+
+    private void onIndexChangeListener(RangeBar ignore, int min, int max, Holder holder) {
+        onMinRangeChange(min, holder)
+        onMaxRangeChange(max, holder)
+        EventBus.default.post(new DataChangedEvent())
+    }
+
+    private void onMinRangeChange(int min, Holder holder) {
+        int from = min * pricePerTick
+        holder.fromText.text = 'From: ' + from
+        globalAdapter.filters.price.min = from == 0 ? null : from.toString()
+    }
+
+    private void onMaxRangeChange(int max, Holder holder) {
+        int to = max * pricePerTick
+        holder.toText.text = to == maxPrice ? 'To: 3500+' : 'To: ' + to
+        globalAdapter.filters.price.max = to == maxPrice ? null : to.toString()
     }
 
     static class Holder extends RecyclerView.ViewHolder {
