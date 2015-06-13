@@ -36,7 +36,7 @@ final class FiltersHeaderItem extends ItemAdapter<Holder> {
         view.selected = !view.selected
         if (view.selected) {
             globalAdapter.addBelow(this, new FilterPriceItem(globalAdapter))
-            globalAdapter.addBelow(this, new FilterPriceItem(globalAdapter))
+            globalAdapter.addBelow(this, new FilterRoomsItem(globalAdapter))
             globalAdapter.addBelow(this, new FilterPriceItem(globalAdapter))
         } else {
             globalAdapter.removeGroup(FILTER)

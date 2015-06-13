@@ -6,6 +6,7 @@ import com.ordonteam.home4jars.view.common.BaseRecyclerViewAdapter
 import com.ordonteam.home4jars.view.common.item.ItemAdapter
 import com.ordonteam.home4jars.view.common.item.ItemGroup
 import com.ordonteam.home4jars.view.filters.item.FilterPriceItem
+import com.ordonteam.home4jars.view.filters.item.FilterRoomsItem
 import com.ordonteam.home4jars.view.filters.item.FiltersHeaderItem
 import com.ordonteam.home4jars.view.prefrences.item.PreferencesHeaderItem
 import com.ordonteam.home4jars.view.prefrences.item.first.FirstRowPreferencesItemAdapter
@@ -29,7 +30,7 @@ final class GlobalAdapter extends BaseRecyclerViewAdapter {
         items.add(new SecondRowPreferencesItemAdapter(this))
         items.add(new FiltersHeaderItem(this))
         items.add(new FilterPriceItem(this))
-        items.add(new FilterPriceItem(this))
+        items.add(new FilterRoomsItem(this))
         items.add(new FilterPriceItem(this))
         items.add(new ResultsHeaderItem(this))
     }
