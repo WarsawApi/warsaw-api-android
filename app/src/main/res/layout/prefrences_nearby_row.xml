@@ -8,20 +8,33 @@
 
     <EditText
         android:id="@+id/preferences_nearby_input"
+        android:singleLine="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/preferences_nearby_hint_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:padding="@dimen/margin_small"
+        android:singleLine="true" />
+
     <TextView
         android:id="@+id/preferences_nearby_hint_2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:padding="@dimen/margin_small"
+        android:singleLine="true" />
+
     <TextView
         android:id="@+id/preferences_nearby_hint_3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:padding="@dimen/margin_small"
+        android:singleLine="true" />
 </LinearLayout>
 
         
