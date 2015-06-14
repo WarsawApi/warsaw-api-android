@@ -3,32 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:showIn="@layout/preferences">
 
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/icons_margin"
-        android:layout_weight="1"
-        android:background="@drawable/selectable"
-        android:src="@drawable/nearby" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/icons_margin"
-        android:layout_weight="1"
-        android:background="@drawable/selectable"
-        android:src="@drawable/nearby" />
-
-    <ImageView
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/icons_margin"
-        android:layout_weight="1"
-        android:background="@drawable/selectable"
-        android:src="@drawable/nearby" />
+    <EditText
+        android:id="@+id/preferences_nearby_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/preferences_nearby_hint_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/preferences_nearby_hint_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/preferences_nearby_hint_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
 
         

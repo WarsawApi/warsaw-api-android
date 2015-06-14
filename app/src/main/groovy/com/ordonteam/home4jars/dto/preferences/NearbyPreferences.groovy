@@ -4,4 +4,6 @@ import groovy.transform.CompileStatic
 
 @CompileStatic
 final class NearbyPreferences {
+
+    String phrase
 }
