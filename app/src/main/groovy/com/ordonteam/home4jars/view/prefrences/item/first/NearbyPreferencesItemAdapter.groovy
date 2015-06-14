@@ -46,7 +46,6 @@ final class NearbyPreferencesItemAdapter extends ItemAdapter<Holder> {
     @Override
     void onBindViewHolder(Holder holder) {
         holder.input.text = nearbyPreferences.phrase
-        holder.input.requestFocus()
         holder.input.addTextChangedListener(new EmptyTextWatcher(this.&onTextChanged.rcurry(holder)))
         holder.hint1.text = ''
         holder.hint1.onClickListener = this.&onTextViveClicked.rcurry(holder.input)
